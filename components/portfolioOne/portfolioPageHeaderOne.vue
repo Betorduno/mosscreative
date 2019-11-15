@@ -3,11 +3,11 @@
         	<section id="page-header" data-percent-height="0.9">
 					
 					<!-- Begin page header image -->
-					<div class="page-header-image parallax fade-out-scroll-6 bg-image" :style="'background-image: url(); background-position: 50% 40%;'">
+					<div class="page-header-image parallax fade-out-scroll-6 bg-image" :style="'background-image: url('+this.projects[1].mainImage[0].fields.file.url+'); background-position: 50% 40%;'">
 
 						<!-- Begin page header caption -->
 						<div class="page-header-caption">
-							<h1 class="page-header-title">{{projects.title}}</h1>
+							<h1 class="page-header-title">{{projects[1].title}}</h1>
 						</div>
 						<!-- End page header caption -->
 
@@ -19,7 +19,7 @@
 					<!-- End page header image -->
 
 				</section>
-				<pre>{{projects.fields.mainImage}}</pre>
+				<!-- <pre>{{projects.fields.mainImage}}</pre> -->
   </div> 
 </template>
 <script>
@@ -29,7 +29,7 @@ export default {
 		return {
 		}
 	},mounted(){
-		console.log(this.projects)
+		// console.log('estoy dentro',this.projects[1].mainImage[0].fields.file.url)
 	}
 }
 </script>

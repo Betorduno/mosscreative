@@ -64,22 +64,22 @@
 				///// Begin split box section (portfolio single info) /////
 				based on: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
         =======================================================-->
-        <pageOneInfo :projects="projects"/>
+        <pageOneInfo v-if="projects.length>0" :projects="projects"/>
         <!-- End split box section -->
         <!-- ================================================
 				///// Begin portfolio single gallery (carousel) /////
         =================================================-->
-        <pageOneGallery :projects="projects"/>
+        <pageOneGallery v-if="projects.length>0" :projects="projects"/>
         <!-- End portfolio single gallery -->
         <!-- ===================================
 				///// Begin call to action section /////
         ====================================-->
-        <pageOneAction :projects="projects" />
+        <pageOneAction v-if="projects.length>0" :projects="projects" />
         <!-- End call to action section -->
         <!-- =====================================================
 				///// Begin portfolio single nav (Next/Prev project) /////
         ======================================================-->
-        <pageOneNext :projects="projects"/>
+        <pageOneNext v-if="projects.length>0" :projects="projects"/>
 	
         <!-- End portfolio single nav -->
       </div>
@@ -124,11 +124,11 @@ export default {
   methods: {
 
 	  async getData() {
-      
+     
 		  let id = this.$route.params.id;
       let response = await contentful.getEntry(id)
-      this.projects = response
-      
+      this.projects = Object.values(response)
+      console.log("este es ",this.projects.length);
 	  }
   },
   mounted() {

@@ -11,8 +11,8 @@
 									<!-- Begin split box content -->
 									<div class="split-box-content">
 
-										<h3>- About Project</h3>
-										<p>Advanced, easy to edit mockup. It contains everything you need to create a realistic look of your project. Guarantees the a good look for bright and dark designs and perfect fit to the shape. Easy to navigate, well described layers, friendly help file.</p>
+										<h3>-{{projects[1].aboutProjectDescriptionTitle}}</h3>
+										<p>{{projects[1].aboutProjectDescription}}</p>
 										
 									</div>
 									<!-- End split box content -->
@@ -26,9 +26,9 @@
 									<div class="split-box-content">
 
 										<ul class="list-unstyled" style="color: #f3ebeb">
-											<li><strong>Client:</strong> <span class="hide-from-lg">.............</span> yogurt86</li>
-											<li><strong>Category:</strong> <span class="hide-from-lg">............</span> Print, Photography</li>
-											<li><strong>Launch Project:</strong> <span class="hide-from-lg">............</span> <a target="_blank" href="http://behance.net/yogurt86">behance.net/yogurt86</a></li>
+											<li><strong>Client:</strong> <span class="hide-from-lg">.............</span>{{projects[1].clienteDescription}} </li>
+											<li><strong>Category:</strong> <span class="hide-from-lg">............</span> {{projects[1].categoryDescription}}</li>
+											<li><strong>Launch Project:</strong> <span class="hide-from-lg">............</span> <a target="_blank" href="http://behance.net/yogurt86"></a>{{projects[1].laucheProjectUrlDescription}}</li>
 										</ul>
 
 									</div>
@@ -41,3 +41,12 @@
 				</section>
 
 </template>
+<script>
+export default {
+	props: {
+    	projects: {}
+	  },mounted(){
+		  console.log(this.projects[1].clienteDescription)
+	  }
+}
+</script>
