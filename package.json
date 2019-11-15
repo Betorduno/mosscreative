@@ -1,0 +1,19 @@
+{
+  "name": "mosscreativoAll",
+  "version": "1.0.0",
+  "description": "mosscreativo",
+  "author": "tenz3194",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
+    "contentful": "^7.10.0",
+    "nuxt": "^2.10.2"
+  },
+  "devDependencies": {}
+}

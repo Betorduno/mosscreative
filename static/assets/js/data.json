@@ -1,0 +1,17 @@
+[
+    {   "id": 0,
+        "image": "intro-bg-1.jpg",
+        "isActive": true
+      },
+      {
+        "id": 1,
+        "image": "intro-bg-2.jpg",
+        "isActive": true
+      },
+      { "id": 3,
+        "image": "intro-bg-3.jpg",
+        "isActive": true
+      }
+      
+  ]
+  
