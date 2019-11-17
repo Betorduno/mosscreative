@@ -1,6 +1,6 @@
 <template>
     <div>
-		<nav id="menu" class="menu slide-right-half bg-image" style=" background-position: 50% 50%">
+		<nav id="menu" class="menu slide-right-half bg-image" style=" background-position: 50% 50% ;">
 
 				<!-- Element cover -->
 				<div class="cover bg-transparent-5-dark"></div>
@@ -79,7 +79,7 @@
 				<!-- End menu content -->
 
 			</nav>
-	<div id="header-attriputes">
+		<div id="header-attriputes">
 				<ul>
 					<li>
 						<!-- Begin menu trigger -->

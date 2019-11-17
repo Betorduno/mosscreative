@@ -19,7 +19,6 @@ export default {
       { src: 'assets/vendor/jquery/js/jquery.min.js'}
       ,{ src: 'assets/vendor/jquery/js/jquery-ui.min.js'}
       ,{ src: 'assets/vendor/bootstrap/js/bootstrap.min.js'}
-
       ,{ src: 'assets/vendor/pace.min.js'}
       ,{ src: 'assets/vendor/jquery.easing.min.js'}
       ,{ src: 'assets/vendor/isotope.pkgd.min.js'}

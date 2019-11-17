@@ -6463,7 +6463,7 @@ input.cart-plus-minus-box:focus {
 	outline: none;
 }
 .owl-dots button.owl-dot span {
-	display: inline-block;
+	display: none;
 	width: 12px;
 	height: 12px;
 	margin: 0px 3px;
