@@ -11,7 +11,7 @@
 			<!-- ==============================
 			///// Begin header attriputes /////
 			=============================== -->
-				<menuPage/>
+				<headerPage/>
 			<!-- End header attriputes -->
 
 		</div>
@@ -19,11 +19,11 @@
     </div>
 </template>
 <script>
-import menuPage from '../components/menuPage';
+import headerPage from '../components/headerMenu';
 export default {
 	props: ['logoType'],
 	components:{
-		menuPage
+		headerPage
 	}
 }
-</script>
+</script> 

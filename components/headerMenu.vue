@@ -1,6 +1,6 @@
 <template>
-    <div>
-		<nav id="menu" class="menu slide-right-half bg-image" style=" background-position: 50% 50% ;">
+<div>    
+<nav id="menu" class="menu slide-right-half bg-image" style="background-image: url('assets/img/misc/menu-bg-1.jpg'); background-position: 50% 50%">
 
 				<!-- Element cover -->
 				<div class="cover bg-transparent-5-dark"></div>
@@ -15,29 +15,15 @@
 						<div class="menu-nav">
 							<ul class="menu-list">
 								<li class="has-children active">
-									<a href="index.html#0" class="sub-menu-trigger">Home</a> 
+									<a href="/" class="sub-menu-trigger">Home</a>
 								</li>
 								<li class="has-children">
-									<a href="index.html#0" class="sub-menu-trigger">About</a> 
+									<a href="/somoos" class="sub-menu-trigger">SoMoos</a> 
 								</li>
 								<li class="has-children">
-									<a href="index.html#0" class="sub-menu-trigger">Portfolio</a> 
+									<a href="/contact" class="sub-menu-trigger">Contacto</a> 
 								</li>
-								<li class="has-children">
-									<a href="index.html#0" class="sub-menu-trigger">Articles</a> 
-								</li>
-								<li class="has-children">
-									<a href="index.html#0" class="sub-menu-trigger">Gallery</a>
-								</li>
-								<li class="has-children">
-									<a href="index.html#0" class="sub-menu-trigger">Shop</a>
-								</li>
-								<li class="has-children">
-									<a href="index.html#0" class="sub-menu-trigger">Contact</a>
-								</li>
-								<li class="has-children">
-									<a href="index.html#0" class="sub-menu-trigger">Pages</a>
-								</li>
+								
 							</ul>
 						</div>
 						<!-- End menu nav -->
@@ -79,7 +65,7 @@
 				<!-- End menu content -->
 
 			</nav>
-		<div id="header-attriputes">
+			<div id="header-attriputes">
 				<ul>
 					<li>
 						<!-- Begin menu trigger -->
@@ -107,7 +93,27 @@
 					</li>
 				</ul> 
 			</div>
+      
     </div>
+   
+		
 </template>
+<script>
+export default {
+	methods: {
+		triggerMenu () {
+			let body = $('body')
+			if (body.hasClass('menu-open')) {
+				body.removeClass('menu-open')
+			} else {
+				body.addClass('menu-open')
+			}
+		}
+	},
+	mounted(){
+		$('.mt-inner').click(this.triggerMenu)
 
+	}
+}
+</script>
 

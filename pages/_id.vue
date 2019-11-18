@@ -30,23 +30,7 @@
     <!-- ===================
 		///// Begin header /////
     ====================-->
-    <div id="header">
-      <!-- Begin logo
-      ================-->
-      <div id="logo">
-        <a href="index.html">
-          <img src="assets/img/logo-black.png" title="Home" alt="logo" />
-        </a>
-      </div>
-      <!-- End logo -->
-
-      <!-- =================
-			///// Begin menu /////
-			======================
-			* Use class "slide-left", "slide-left-half", "slide-right", "slide-right-half", "slide-top", "slide-bottom" or "zoom-in" to change menu effect.
-      -->
-      <menuPage />
-    </div>
+    <headerPage/>
     <!-- End header -->
 
     <!-- *************************************
@@ -97,7 +81,7 @@
   </div>
 </template>
 <script>
-import menuPage from "../components/menuPage";
+import headerPage from "../components/headerMenu";
 import pageOneHeader from "../components/portfolioOne/portfolioPageHeaderOne";
 import pageOneInfo from "../components/portfolioOne/portfolioInfoOne";
 import pageOneGallery from "../components/portfolioOne/portfolioOneGallery";
@@ -113,7 +97,7 @@ export default {
     }
   },
   components: {
-    menuPage,
+    headerPage,
     pageOneHeader,
     pageOneInfo,
     pageOneGallery,

@@ -4661,12 +4661,12 @@ section {
 	color: #FFF;
 }
 .sli-btn-cart {
-	background-color: #f3df03;
+	background-color: #414042;
 	color: #222;
 }
 .sli-btn-cart:hover,
 .sli-btn-cart:focus {
-	background-color: #e4d101;
+	background-color: #414042;
 	color: #222;
 }
 
@@ -6285,11 +6285,11 @@ input.cart-plus-minus-box:focus {
 }
 .owl-carousel .owl-nav button.owl-prev:hover {
 	background-color: #414042;
-	background-image: url("../img/arrow-left-light.png");
+	background-image: url("../img/arrow-left-dark.png");
 }
 .owl-carousel .owl-nav button.owl-next:hover {
 	background-color: #414042;
-	background-image: url("../img/arrow-right-light.png");
+	background-image: url("../img/arrow-right-dark.png");
 }
 .owl-carousel .owl-nav button.owl-prev {
 	left: 0px;
@@ -8045,9 +8045,9 @@ label {
 	border-color: #f3f3f3;
 }
 .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary {
-	color: #333;
-	background-color:#EFD900;
-	border-color: #EFD900;
+	color: rgb(235, 230, 230);
+	background-color:#414042;
+	border-color: #414042;
 }
 .btn-primary.btn-link {
 	color: rgb(252, 252, 252);
