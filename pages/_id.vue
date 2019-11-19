@@ -7,14 +7,14 @@
     <div id="global-search" class="gl-s gls-simple">
       <!-- Begin global search close button -->
       <div class="global-search-close-wrap">
-        <a href="portfolio-single-1.html#0" class="global-search-close" title="Close">
+        <a href="" class="global-search-close" title="Close">
           <i class="fas fa-close"></i>
         </a>
       </div>
       <!-- End global search close button -->
 
       <!-- Begin global search form -->
-      <form id="global-search-form" method="get" action="search-results-2.html">
+      <form id="global-search-form" method="get" action="">
         <input
           type="text"
           class="form-control"

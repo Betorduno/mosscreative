@@ -12,7 +12,7 @@
 						<!-- End page header caption -->
 
 						<!-- Begin scroll down button -->
-						<a href="portfolio-single-1.html#portfolio-single-info" class="scroll-down sm-scroll hide-from-sm" title="Scroll down"></a>
+						<a href="_id#portfolio-single-info" class="scroll-down sm-scroll hide-from-sm" title="Scroll down"></a>
 						<!-- End scroll down button -->
 
 					</div>

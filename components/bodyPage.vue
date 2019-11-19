@@ -6,7 +6,7 @@
 			
 			<!-- Begin global search close button -->
 			<div class="global-search-close-wrap">
-				<a href="index.html#0" class="global-search-close" title="Close">
+				<a href="index#0" class="global-search-close" title="Close">
 					<i class="fas fa-close"></i>
 				</a>
 			</div>

@@ -23,7 +23,7 @@
 							<ul class="list-unstyled" style="color: #f3ebeb">
 								<li><strong>Client:</strong> <span class="hide-from-lg">.............</span>{{projects[1].clienteDescription}} </li>
 								<li><strong>Category:</strong> <span class="hide-from-lg">............</span> {{projects[1].categoryDescription}}</li>
-								<li><strong>Launch Project:</strong> <span class="hide-from-lg">............</span> <a target="_blank" href="http://behance.net/yogurt86"></a>{{projects[1].laucheProjectUrlDescription}}</li>
+								<li><strong>Launch Project:</strong> <span class="hide-from-lg">............</span> <a target="_blank" href=""></a>{{projects[1].laucheProjectUrlDescription}}</li>
 							</ul>
 						</div>
 						<!-- End split box content -->

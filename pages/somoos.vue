@@ -1,19 +1,17 @@
 <template>
 	<div>
-		<body class="  pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
-  <div class="pace-progress-inner"></div>
-</div>
-<div class="pace-activity"></div></div>
-
-		<!-- Begin global search (simple) 
-		==================================
-		* Use class "gl-search-dark" to enable global search dark style.
-		-->
+		<body class="pace-done">
+			<div class="pace pace-inactive">
+				<div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+  				<div class="pace-progress-inner">
+			</div>
+		</div>
+	<div class="pace-activity"></div></div>
 		<div id="global-search" class="gl-s gls-simple">
 			
 			<!-- Begin global search close button -->
 			<div class="global-search-close-wrap">
-				<a href="about-me.html#0" class="global-search-close" title="Close">
+				<a href="" class="global-search-close" title="Close">
 					<i class="fas fa-close"></i>
 				</a>
 			</div>
@@ -37,7 +35,7 @@
 			<!-- Begin logo
 			================ -->
 			<div id="logo">
-				<a href="index.html"><img src="assets/img/logo-black.png" title="Home" alt="logo"></a>
+				<a href="/"><img src="assets/img/logo-black.png" title="Home" alt="logo"></a>
 			</div>
 			<!-- End logo -->
 			<menuPage/>
@@ -56,14 +54,14 @@
 				<!-- ========================
 				///// Begin page header /////
 				========================= -->
-				<section id="page-header" data-percent-height="0.9" style="height: 249.3px;">
+				<section id="page-header" data-percent-height="0.99">
 
 					<!-- Begin page header image -->
-					<div class="page-header-image parallax fade-out-scroll-6 bg-image" style="background-image: url(&quot;assets/img/page-header/page-header-bg-25.jpg&quot;); background-position: 50% 20%; transform: translate3d(0px, 471.6px, 0px); opacity: -0.572;">
+					<div class="page-header-image parallax fade-out-scroll-6 bg-image" style="background-image: url('assets/img/page-header/page-header-bg-25.jpg'); background-position: 50% 20%;">
 
 						<!-- Begin page header caption -->
 						<div class="page-header-caption">
-							<h1 class="page-header-title">About Me</h1>
+							<h1 class="page-header-title">MossCreativo</h1>
 							<div class="page-header-sub-title-wrap">
 								<h2 class="page-header-sub-title">
 									Who I Am.
@@ -73,7 +71,7 @@
 						<!-- End page header caption -->
 
 						<!-- Begin scroll down button -->
-						<a href="about-me.html#who-i-am" class="scroll-down sm-scroll hide-from-sm" title="Scroll down"></a>
+						<a href="/somoos#who-i-am" class="scroll-down sm-scroll hide-from-sm" title="Scroll down"></a>
 						<!-- End scroll down button -->
 
 					</div>
@@ -111,8 +109,18 @@
 									<div class="split-box-content">
 										<div class="bg-transparent-6-white padding-30">
 											<h2 >-Moss<span style="color: ##516d51;"> <strong >/Musgo</strong></span></h2>
-											<p>Sollicitudin diam vitae, amet lacus donec eu, donec vulputate duis nullam nulla, suscipit nulla orci, ornare maecenas eget gravida. Curae sollicitudin lobortis phasellus. Fusce sapien, metus mi et libero enim sed lorem.</p>
-											<a href="contact.html" class="btn btn-dark-bordered margin-top-20">Want Me To Work For You?</a>
+											<p>Los musgos son una especie muy importante para el ecosistema,
+												 ya que son los primeros organismos en aparecer en la
+												  superficies del suelo y rocas, y esto ayuda a generar una 
+												  capa húmeda y acolchada sobre la que se desarrollan el resto
+												   de especies vegetales.
+											</p>
+											<p>
+												Es por eso que nace MOSS como “elemento creativo” un estudio donde 
+												convergen diferentes conocimientos claves para darle vida a todo 
+												tipo de proyectos.
+											</p>
+											<a href="contact" class="btn btn-dark-bordered margin-top-20">Want Me To Work For You?</a>
 										</div>
 									</div>
 									<!-- End split box content -->
@@ -122,6 +130,7 @@
 						</div> <!-- /.row -->
 					</div> <!-- /.container -->
 				</section>
+				
 				<!-- End split box section -->
 
 			</div>
@@ -143,6 +152,9 @@ export default {
     components:{
         footerPage,
         menuPage
-    }
+    }, 
+	mounted(){
+		window.dispatchEvent(new Event("resize"));
+	}
 }
 </script>

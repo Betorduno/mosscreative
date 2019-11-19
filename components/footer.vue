@@ -31,12 +31,12 @@
 							<!-- Begin social buttons -->
 							<div class="social-buttons margin-bottom-15">
 								<ul>
-									<li><a href="index.html#" class="btn btn-primary btn-link" target="_blank" title="Follow us on facebook"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="index.html#" class="btn btn-primary btn-link" target="_blank" title="Follow us on twitter"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="index.html#" class="btn btn-primary btn-link" target="_blank" title="Follow us on dribbble"><i class="fab fa-dribbble"></i></a></li>
-									<li><a href="index.html#" class="btn btn-primary btn-link" target="_blank" title="Follow us on behance"><i class="fab fa-behance"></i></a></li>
-									<li><a href="index.html#" class="btn btn-primary btn-link" target="_blank" title="Follow us on linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-									<li><a href="index.html#" class="btn btn-primary btn-link" target="_blank" title="Follow us on youtube"><i class="fab fa-youtube"></i></a></li>
+									<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on facebook"><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on twitter"><i class="fab fa-twitter"></i></a></li>
+									<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on dribbble"><i class="fab fa-dribbble"></i></a></li>
+									<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on behance"><i class="fab fa-behance"></i></a></li>
+									<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+									<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on youtube"><i class="fab fa-youtube"></i></a></li>
 								</ul>
 							</div>
 							<!-- End social buttons -->
@@ -62,7 +62,7 @@
 				</div> <!-- /.container -->
 
 				<!-- Scroll to top button -->
-				<a href="#" class="scrolltotop sm-scroll"></a>
+			
 				
 
 			</footer>

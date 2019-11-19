@@ -39,24 +39,19 @@
 								<!-- Begin social buttons -->
 								<div class="social-buttons">
 									<ul>
-										<li><a href="index.html#" class="btn btn-primary btn-link" target="_blank" title="Follow us on facebook"><i class="fab fa-facebook-f"></i></a></li>
-										<li><a href="index.html#" class="btn btn-primary btn-link" target="_blank" title="Follow us on twitter"><i class="fab fa-twitter"></i></a></li>
-										<li><a href="index.html#" class="btn btn-primary btn-link" target="_blank" title="Follow us on dribbble"><i class="fab fa-dribbble"></i></a></li>
-										<li><a href="index.html#" class="btn btn-primary btn-link" target="_blank" title="Follow us on behance"><i class="fab fa-behance"></i></a></li>
-										<li><a href="index.html#" class="btn btn-primary btn-link" target="_blank" title="Follow us on linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-										<li><a href="index.html#" class="btn btn-primary btn-link" target="_blank" title="Follow us on youtube"><i class="fab fa-youtube"></i></a></li>
+										<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on facebook"><i class="fab fa-facebook-f"></i></a></li>
+										<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on twitter"><i class="fab fa-twitter"></i></a></li>
+										<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on dribbble"><i class="fab fa-dribbble"></i></a></li>
+										<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on behance"><i class="fab fa-behance"></i></a></li>
+										<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+										<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on youtube"><i class="fab fa-youtube"></i></a></li>
 									</ul>
 								</div>
 								<!-- End social buttons -->
 								
 							</div> <!-- /.col -->
 
-							<div class="col-sm-6 text-right">
-								<!-- made with love -->
-								<div class="made-with-love hide-from-sm">
-									<p>Made With <span class="text-yellow"><i class="far fa-heart"></i></span></p>
-								</div>
-							</div> <!-- /.col -->
+							 <!-- /.col -->
 						</div> <!-- /.row -->
 					</div>
 					<!-- End menu footer -->
@@ -84,11 +79,7 @@
 
 					<li>
 						<!-- Begin global search trigger -->
-						<div id="global-search-trigger">
-							<a href="index.html#0" class="gst-icon" title="Search...">
-								<i class="fas fa-search"></i>
-							</a>
-						</div>
+						
 						<!-- End global search trigger -->
 					</li>
 				</ul> 

@@ -8,7 +8,7 @@
       <!-- Begin logo
       ================-->
       <div id="logo">
-        <a href="index.html">
+        <a href="index">
           <img src="assets/img/logo-white.png" title="Home" alt="logo" />
         </a>
       </div>
@@ -25,28 +25,26 @@
         <!-- ========================
 				///// Begin page header /////
         =========================-->
-        <section id="page-header" data-percent-height="0.9" style="height: 310.5px;">
-          <!-- Begin page header image -->
-          <div
-            class="page-header-image parallax fade-out-scroll-6 bg-image"
-            style="background-image: url(&quot;assets/img/page-header/page-header-bg-12.jpg&quot;); background-position: 50% 50%; transform: translate3d(0px, 306.8px, 0px); opacity: -0.0226667;"
-          >
-            <!-- Begin page header caption -->
-            <div class="page-header-caption">
-              <h1 class="page-header-title">Contact</h1>
-            </div>
-            <!-- End page header caption -->
+       
+              <section id="page-header" data-percent-height="0.9">
 
-            <!-- Begin scroll down button -->
-            <a
-              href="contact.html#contact-section"
-              class="scroll-down sm-scroll hide-from-sm"
-              title="Scroll down"
-            ></a>
-            <!-- End scroll down button -->
-          </div>
-          <!-- End page header image -->
-        </section>
+					<!-- Begin page header image -->
+					<div class="page-header-image parallax fade-out-scroll-6 bg-image" style="background-image: url('assets/img/page-header/page-header-bg-12.jpg'); background-position: 50% 50%;">
+
+						<!-- Begin page header caption -->
+						<div class="page-header-caption">
+							<h1 class="page-header-title">Contact</h1>
+						</div>
+						<!-- End page header caption -->
+
+						<!-- Begin scroll down button -->
+						<a href="contact#contact-section" class="scroll-down sm-scroll hide-from-sm" title="Scroll down"></a>
+						<!-- End scroll down button -->
+
+					</div>
+					<!-- End page header image -->
+
+				</section>  	
         <!-- End page header -->
 
         <!-- ========================================
@@ -82,7 +80,7 @@
                       <ul>
                         <li>
                           <a
-                            href="contact.html#"
+                            href="contact#"
                             class="btn btn-social-min btn-primary-bordered btn-rounded-full"
                             target="_blank"
                             title="Follow us on facebook"
@@ -92,7 +90,7 @@
                         </li>
                         <li>
                           <a
-                            href="contact.html#"
+                            href="contact#"
                             class="btn btn-social-min btn-primary-bordered btn-rounded-full"
                             target="_blank"
                             title="Follow us on twitter"
@@ -102,7 +100,7 @@
                         </li>
                         <li>
                           <a
-                            href="contact.html#"
+                            href="contact#"
                             class="btn btn-social-min btn-primary-bordered btn-rounded-full"
                             target="_blank"
                             title="Follow us on dribbble"
@@ -112,7 +110,7 @@
                         </li>
                         <li>
                           <a
-                            href="contact.html#"
+                            href="contact#"
                             class="btn btn-social-min btn-primary-bordered btn-rounded-full"
                             target="_blank"
                             title="Follow us on behance"
@@ -122,7 +120,7 @@
                         </li>
                         <li>
                           <a
-                            href="contact.html#"
+                            href="contact#"
                             class="btn btn-social-min btn-primary-bordered btn-rounded-full"
                             target="_blank"
                             title="Follow us on linkedin"
@@ -132,7 +130,7 @@
                         </li>
                         <li>
                           <a
-                            href="contact.html#"
+                            href="contact#"
                             class="btn btn-social-min btn-primary-bordered btn-rounded-full"
                             target="_blank"
                             title="Follow us on youtube"
@@ -209,19 +207,6 @@
                           </div>
                         </div>
                       </div>
-                      <!-- <div class="row">
-													<div class="col-lg-12">
-														<div class="form-group">
-															<select class="form-control" required>
-																<option value="" disabled selected>Select an option</option>
-																<option value="say hello">Say hello</option>
-																<option value="new project">New project</option>
-																<option value="feedback">Feedback</option>
-																<option value="other">Other</option>
-															</select>
-														</div>
-													</div>
-                      </div>-->
                       <div class="row margin-top-20">
                         <div class="col-lg-12">
                           <div class="form-group">
@@ -284,7 +269,7 @@ import footerPage from "../components/footer";
 import menuPage from "../components/headerMenu";
 export default {
   mounted() {
-   
+
       window.dispatchEvent(new Event("resize"));
   },
   components: {
