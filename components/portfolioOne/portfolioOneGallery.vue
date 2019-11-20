@@ -38,8 +38,6 @@ export default {
   },
   mounted() {
     $(".owl-carousel").owlCarousel({
-      
-     
       nav: true,
       responsive: {
         0: {
@@ -52,7 +50,31 @@ export default {
           items: 3
         }
       }
-    });
+	});
+
+$('.popup-gallery').each(function() { // the containers for all your galleries
+      $(this).magnificPopup({
+         delegate: '.popup-trigger',
+         type: 'image',
+         tLoading: 'Loading image #%curr%...',
+         mainClass: 'mfp-fadein',
+         gallery: {
+            enabled: true, // enable or disable gallery (false/true)
+            preload: [0,1], // read about this option in next Lazy-loading section
+            navigateByImgClick: true,
+            arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+            tPrev: 'Previous (Left arrow key)', // title for left button
+            tNext: 'Next (Right arrow key)', // title for right button
+            tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
+         },
+         image: {
+            titleSrc: 'data-title', // Attribute of the target element that contains caption for the slide.
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.' // Error message
+         }
+      });
+   });
+
   }
 };
+
 </script>

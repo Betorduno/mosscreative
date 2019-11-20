@@ -9,12 +9,12 @@
                 <div class="isotope-items-wrap pli-caption-alter">
 
                     <div class="grid-sizer"></div>
-                    <!-- ===================== 
+                    <!-- =====================
                     /// Begin isotope item ///
                     ========================== -->
                     <div v-bind:class="getHeight(project)" v-for="project in projects" :key="project.fields.id" class="isotope-item">
                     <!-- Begin portfolio list item -->
-                        <router-link :to="'/' + project.sys.id" class="portfolio-list-item bg-image" :style="getStyles(project)">
+                        <nuxt-link :to="'portfolio'+project.fields.portfolioModel+'/' + project.sys.id" class="portfolio-list-item bg-image" :style="getStyles(project)">
                             <div class="pli-hover">
                                 <div class="pli-caption">
                                     <div>
@@ -24,7 +24,7 @@
                                 </div>
                                 <div class="pli-arrow"></div>
                             </div>
-                        </router-link>
+                        </nuxt-link>
                         <!-- End portfolio list item -->
                     </div>
                     <!-- End isotope item -->
@@ -32,7 +32,7 @@
                 <!-- End isotope items wrap -->
             </div>
             <!-- End isotope -->
-    
+
         </div> <!-- /.isotope-wrap -->
     </section>
     <!-- End section -->
@@ -49,10 +49,10 @@ export default {
     },
     methods: {
         filterID (project) {
-            
+
         },
         initEffect () {
-               
+
                 $container = $('.isotope-items-wrap');
 				$container.imagesLoaded(function () {
 					$container.isotope({
@@ -90,20 +90,20 @@ export default {
                 if (project.fields.height == 1) {
                     return "iso-height-1"
                 } else {
-                    
+
                     return "iso-height-2"
-                    
+
                 }
             }
         },
         getStyles (project) {
-            
+
            if (!_.isNil(project.fields.mainImage)) {
-               
+
             return {
                 "background-image": "url(" + project.fields.mainImage[0].fields.file.url + ")",
                 "background-position": "50% 50%"
-                
+
             }
            }
         },
@@ -120,7 +120,7 @@ export default {
     },
     mounted () {
        this.getData()
-     
+
     }
 }
 </script>

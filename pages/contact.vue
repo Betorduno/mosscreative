@@ -8,9 +8,9 @@
       <!-- Begin logo
       ================-->
       <div id="logo">
-        <a href="index">
+        <nuxt-link to="index">
           <img src="assets/img/logo-white.png" title="Home" alt="logo" />
-        </a>
+        </nuxt-link>
       </div>
       <menuPage />
     </div>
@@ -38,7 +38,7 @@
 						<!-- End page header caption -->
 
 						<!-- Begin scroll down button -->
-						<a href="contact#contact-section" class="scroll-down sm-scroll hide-from-sm" title="Scroll down"></a>
+						<nuxt-link to="contact#contact-section" class="scroll-down sm-scroll hide-from-sm" title="Scroll down"></nuxt-link>
 						<!-- End scroll down button -->
 
 					</div>
@@ -71,7 +71,7 @@
                       </p>
                       <p>
                         <i class="fas fa-envelope"></i> email:
-                        <a href="mailto:company@email.com" target="_blank">company@email.com</a>
+                        <nuxt-link to="mailto:company@email.com" target="_blank">company@email.com</nuxt-link>
                       </p>
                     </div>
 
@@ -79,64 +79,64 @@
                     <div class="social-buttons margin-top-20">
                       <ul>
                         <li>
-                          <a
-                            href="contact#"
+                          <nuxt-link
+                            to="contact#"
                             class="btn btn-social-min btn-primary-bordered btn-rounded-full"
                             target="_blank"
                             title="Follow us on facebook"
                           >
                             <i class="fab fa-facebook-f"></i>
-                          </a>
+                          </nuxt-link>
                         </li>
                         <li>
-                          <a
-                            href="contact#"
+                          <nuxt-link
+                            to="contact#"
                             class="btn btn-social-min btn-primary-bordered btn-rounded-full"
                             target="_blank"
                             title="Follow us on twitter"
                           >
                             <i class="fab fa-twitter"></i>
-                          </a>
+                          </nuxt-link>
                         </li>
                         <li>
-                          <a
-                            href="contact#"
+                          <nuxt-link
+                            to="contact#"
                             class="btn btn-social-min btn-primary-bordered btn-rounded-full"
                             target="_blank"
                             title="Follow us on dribbble"
                           >
                             <i class="fab fa-dribbble"></i>
-                          </a>
+                          </nuxt-link>
                         </li>
                         <li>
-                          <a
-                            href="contact#"
+                          <nuxt-link
+                            to="contact#"
                             class="btn btn-social-min btn-primary-bordered btn-rounded-full"
                             target="_blank"
                             title="Follow us on behance"
                           >
                             <i class="fab fa-behance"></i>
-                          </a>
+                          </nuxt-link>
                         </li>
                         <li>
-                          <a
-                            href="contact#"
+                          <nuxt-link
+                            to="contact#"
                             class="btn btn-social-min btn-primary-bordered btn-rounded-full"
                             target="_blank"
                             title="Follow us on linkedin"
                           >
                             <i class="fab fa-linkedin-in"></i>
-                          </a>
+                          </nuxt-link>
                         </li>
                         <li>
-                          <a
-                            href="contact#"
+                          <nuxt-link
+                            to="contact#"
                             class="btn btn-social-min btn-primary-bordered btn-rounded-full"
                             target="_blank"
                             title="Follow us on youtube"
                           >
                             <i class="fab fa-youtube"></i>
-                          </a>
+                          </nuxt-link>
                         </li>
                       </ul>
                     </div>

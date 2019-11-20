@@ -1,6 +1,6 @@
 <template>
-<div>    
-<nav id="menu" class="menu slide-right-half bg-image" style="background-image: url('assets/img/misc/menu-bg-1.jpg'); background-position: 50% 50%">
+<div>
+<nav id="menu" class="menu slide-right-half bg-image" style=" background-position: 50% 50%">
 
 				<!-- Element cover -->
 				<div class="cover bg-transparent-5-dark"></div>
@@ -15,15 +15,15 @@
 						<div class="menu-nav">
 							<ul class="menu-list">
 								<li class="has-children active">
-									<a href="/" class="sub-menu-trigger">Home</a>
+									<nuxt-link  to="/" class="sub-menu-trigger">Home</nuxt-link>
 								</li>
 								<li class="has-children">
-									<a href="/somoos" class="sub-menu-trigger">SoMoos</a> 
+									<nuxt-link to="somoos" class="sub-menu-trigger">SoMoos</nuxt-link>
 								</li>
 								<li class="has-children">
-									<a href="/contact" class="sub-menu-trigger">Contacto</a> 
+									<nuxt-link to="contact" class="sub-menu-trigger">Contacto</nuxt-link>
 								</li>
-								
+
 							</ul>
 						</div>
 						<!-- End menu nav -->
@@ -35,20 +35,20 @@
 					<div class="menu-footer">
 						<div class="row">
 							<div class="col-sm-6">
-								
+
 								<!-- Begin social buttons -->
 								<div class="social-buttons">
 									<ul>
-										<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on facebook"><i class="fab fa-facebook-f"></i></a></li>
-										<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on twitter"><i class="fab fa-twitter"></i></a></li>
-										<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on dribbble"><i class="fab fa-dribbble"></i></a></li>
-										<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on behance"><i class="fab fa-behance"></i></a></li>
-										<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-										<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on youtube"><i class="fab fa-youtube"></i></a></li>
+										<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on twitter"><i class="fab fa-twitter"></i></nuxt-link></li>
+										<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on dribbble"><i class="fab fa-dribbble"></i></nuxt-link></li>
+										<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on facebook"><i class="fab fa-facebook-f"></i></nuxt-link></li>
+										<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on behance"><i class="fab fa-behance"></i></nuxt-link></li>
+										<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on linkedin"><i class="fab fa-linkedin-in"></i></nuxt-link></li>
+										<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on youtube"><i class="fab fa-youtube"></i></nuxt-link></li>
 									</ul>
 								</div>
 								<!-- End social buttons -->
-								
+
 							</div> <!-- /.col -->
 
 							 <!-- /.col -->
@@ -79,15 +79,15 @@
 
 					<li>
 						<!-- Begin global search trigger -->
-						
+
 						<!-- End global search trigger -->
 					</li>
-				</ul> 
+				</ul>
 			</div>
-      
+
     </div>
-   
-		
+
+
 </template>
 <script>
 export default {
@@ -99,11 +99,17 @@ export default {
 			} else {
 				body.addClass('menu-open')
 			}
+		},
+		checkMenu () {
+			let body = $('body')
+			if (body.hasClass('menu-open')) {
+				body.removeClass('menu-open')
+			}
 		}
 	},
 	mounted(){
 		$('.mt-inner').click(this.triggerMenu)
-
+		this.checkMenu()
 	}
 }
 </script>

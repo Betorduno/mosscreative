@@ -1,15 +1,15 @@
 <template>
   <div>
-    <!-- Begin global search (simple) 
+    <!-- Begin global search (simple)
 		==================================
 		* Use class "gl-search-dark" to enable global search dark style.
     -->
     <div id="global-search" class="gl-s gls-simple">
       <!-- Begin global search close button -->
       <div class="global-search-close-wrap">
-        <a href="" class="global-search-close" title="Close">
+        <nuxt-link to="" class="global-search-close" title="Close">
           <i class="fas fa-close"></i>
-        </a>
+        </nuxt-link>
       </div>
       <!-- End global search close button -->
 
@@ -34,7 +34,7 @@
     <!-- End header -->
 
     <!-- *************************************
-		*********** Begin body content *********** 
+		*********** Begin body content ***********
     **************************************-->
     <div id="body-content">
       <!-- Begin content container -->
@@ -64,7 +64,7 @@
 				///// Begin portfolio single nav (Next/Prev project) /////
         ======================================================-->
         <pageOneNext v-if="projects.length>0" :projects="projects"/>
-	
+
         <!-- End portfolio single nav -->
       </div>
       <!-- End content container -->
@@ -81,14 +81,14 @@
   </div>
 </template>
 <script>
-import headerPage from "../components/headerMenu";
-import pageOneHeader from "../components/portfolioOne/portfolioPageHeaderOne";
-import pageOneInfo from "../components/portfolioOne/portfolioInfoOne";
-import pageOneGallery from "../components/portfolioOne/portfolioOneGallery";
-import pageOneAction from "../components/portfolioOne/portfolioOneAction";
-import pageOneNext from "../components/portfolioOne/portfolioOneNext";
-import footerPage from "../components/footer";
-import contentful from "@/plugins/contentful.js";
+import headerPage from "../../components/headerMenu";
+import pageOneHeader from "../../components/portfolioOne/portfolioPageHeaderOne";
+import pageOneInfo from "../../components/portfolioOne/portfolioInfoOne";
+import pageOneGallery from "../../components/portfolioOne/portfolioOneGallery";
+import pageOneAction from "../../components/portfolioOne/portfolioOneAction";
+import pageOneNext from "../../components/portfolioOne/portfolioOneNext";
+import footerPage from "../../components/footer";
+import contentful from "../../plugins/contentful";
 import _ from "lodash";
 export default {
   data() {
@@ -108,11 +108,11 @@ export default {
   methods: {
 
 	  async getData() {
-     
+
 		  let id = this.$route.params.id;
       let response = await contentful.getEntry(id)
       this.projects = Object.values(response)
-      console.log("este es ",this.projects.length);
+
 	  }
   },
   mounted() {

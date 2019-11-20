@@ -20,7 +20,7 @@
 
 							<!-- Begin footer logo -->
 							<div class="footer-logo margin-top-40 margin-bottom-40">
-								<router-link to="/"><img src="assets/img/logo-white.png" title="Home" alt="logo"></router-link>
+								<router-link to="/"><img src="../static/assets/img/logo-white.png" title="Home" alt="logo"></router-link>
 							</div>
 							<!-- End footer logo -->
 
@@ -31,12 +31,11 @@
 							<!-- Begin social buttons -->
 							<div class="social-buttons margin-bottom-15">
 								<ul>
-									<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on facebook"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on twitter"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on dribbble"><i class="fab fa-dribbble"></i></a></li>
-									<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on behance"><i class="fab fa-behance"></i></a></li>
-									<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-									<li><a href="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on youtube"><i class="fab fa-youtube"></i></a></li>
+									<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on facebook"><i class="fab fa-facebook-f"></i></nuxt-link></li>
+									<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on twitter"><i class="fab fa-twitter"></i></nuxt-link></li>
+									<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on dribbble"><i class="fab fa-dribbble"></i></nuxt-link></li>
+									<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on behance"><i class="fab fa-behance"></i></nuxt-link></li>
+									<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on youtube"><i class="fab fa-youtube"></i></nuxt-link></li>
 								</ul>
 							</div>
 							<!-- End social buttons -->

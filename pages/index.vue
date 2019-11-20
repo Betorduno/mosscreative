@@ -3,7 +3,7 @@
   <div>
     <bodyPage/>
   </div>
- 
+
 </template>
 
 <script>
@@ -13,6 +13,7 @@ export default {
   components: {
    bodyPage
   }
+
 }
 </script>
 <style lang="stylus">

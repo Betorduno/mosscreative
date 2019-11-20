@@ -6,7 +6,7 @@
 						<div class="row no-padding">
 
 							<div class="col col-md-12">
-								<a href="#" class="ps-nav-next">
+								<nuxt-link to="/" class="ps-nav-next">
 									<div class="ps-nav ps-nav-single bg-image" style="background-image: url('assets/img/porfolio/portfolio-1.jpg'); background-position: 50% 54%">
 										<div class="ps-nav-meta">
 											<div><h4 class="ps-nav-text">Next Project</h4></div>
@@ -14,7 +14,7 @@
 										</div>
 									</div>
 									<div class="ps-nav-arrow"></div>
-								</a>
+								</nuxt-link>
 							</div> <!-- /.col -->
 
 						</div> <!-- /.row -->

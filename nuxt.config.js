@@ -1,12 +1,12 @@
-require ('dotenv'). config () 
+require ('dotenv'). config ()
 export default {
   mode: 'universal',
   /*
   ** Headers of the page
   */
- env: { 
-  CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID, 
-  CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN 
+ env: {
+  CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
+  CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN
   },
   head: {
     title: process.env.npm_package_name || '',
@@ -42,7 +42,7 @@ link: [
     { rel:'stylesheet' ,href:'assets/vendor/ytplayer/css/jquery.mb.YTPlayer.min.css'},
     { rel:'stylesheet' ,href:'assets/vendor/animate.min.css'},
     { rel:'stylesheet' ,type:'text/css' ,href: 'assets/css/helper.css'},
-    { rel:'stylesheet' ,type:'text/css' ,href:'assets/css/theme.css'},
+    { rel:'stylesheet' ,type:'text/css' ,href:'./assets/css/theme.css'},
     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
 ]
   },
@@ -59,7 +59,7 @@ link: [
   ** Plugins to load before mounting the App
   */
   plugins: [
-    
+
   ],
   /*
   ** Nuxt.js dev-modules

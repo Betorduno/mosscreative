@@ -224,8 +224,8 @@
 /* ------------------------------------------------------------- */
 
 /* fonts (alternate) */
-.font-alter-1 { 
-	/* add your alternate font family here if needed */ 
+.font-alter-1 {
+	/* add your alternate font family here if needed */
 }
 
 /* font weight/styles */
@@ -794,7 +794,7 @@
 
 
 /* ------------------------------------------------------------------ *
- *  Background transparent gradient color classes 
+ *  Background transparent gradient color classes
  *  gradient generator: http://www.colorzilla.com/gradient-editor/
 /* ------------------------------------------------------------------ */
 
@@ -1318,9 +1318,9 @@
 .no-margin-left { margin-left: 0 !important; }
 .no-margin-right { margin-right: 0 !important; }
 
-.margin-auto { 
-	margin-left: auto !important; 
-	margin-right: auto !important; 
+.margin-auto {
+	margin-left: auto !important;
+	margin-right: auto !important;
 }
 
 .margin-5 { margin: 5px !important; }

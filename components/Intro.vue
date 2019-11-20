@@ -8,7 +8,7 @@
         data-nav="true"
       >
         <div v-if="loading">loading...</div>
-        <!-- Begin carousel item 
+        <!-- Begin carousel item
         =========================-->
         <div
           v-else
@@ -45,7 +45,7 @@ export default {
   mounted() {
     this.getData();
     setTimeout(() => {
-      
+
       this.loading = false;
       this.$nextTick(() => {
         window.dispatchEvent(new Event("resize"));
@@ -89,16 +89,16 @@ export default {
       contentful
         .getEntries({ content_type: "sliders" })
         .then(v => {
-        
+
         v.items.forEach(element => {
             this.datos= element.fields.imageMain;
-            
+
           });
         })
         .catch(error => {
           alert(error);
         });
-        
+
     },
     changeSlider(event) {
       let change = event.item.index;

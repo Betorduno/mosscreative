@@ -6,9 +6,9 @@
 			
 			<!-- Begin global search close button -->
 			<div class="global-search-close-wrap">
-				<a href="index#0" class="global-search-close" title="Close">
+				<nuxt-link to="index#0" class="global-search-close" title="Close">
 					<i class="fas fa-close"></i>
-				</a>
+				</nuxt-link>
 			</div>
 			<!-- End global search close button -->
 
