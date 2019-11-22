@@ -8,7 +8,7 @@
 			</div>
 			<div class="pace-activity"></div></div>
 			<div id="global-search" class="gl-s gls-simple">
-				
+
 				<!-- Begin global search close button -->
 				<div class="global-search-close-wrap">
 					<nuxt-link to="" class="global-search-close" title="Close">
@@ -26,7 +26,7 @@
 			</div>
 			<!-- End global search -->
 
-			
+
 			<!-- ===================
 			///// Begin header /////
 			==================== -->
@@ -44,7 +44,7 @@
 
 
 			<!-- *************************************
-			*********** Begin body content *********** 
+			*********** Begin body content ***********
 			************************************** -->
 			<div id="body-content">
 
@@ -57,7 +57,7 @@
 					<section id="page-header" data-percent-height="0.99">
 
 						<!-- Begin page header image -->
-						<div class="page-header-image parallax fade-out-scroll-6 bg-image" style="background-image: url('assets/img/page-header/page-header-bg-25.jpg'); background-position: 50% 20%;">
+						<div class="page-header-image parallax fade-out-scroll-6 bg-image" style="background-image: url('/assets/img/page-header/page-header-bg-25.jpg'); background-position: 50% 20%;">
 
 							<!-- Begin page header caption -->
 							<div class="page-header-caption">
@@ -91,7 +91,7 @@
 								<div class="row-md-height">
 
 									<!-- Column (use class "cover-left" or "cover-right" to enable image cover) -->
-									<div class="col-md-6 col-md-height split-box-image no-padding bg-image" style="background-image: url('assets/img/team/team-6.jpg'); background-position: 50% 50%;">
+									<div class="col-md-6 col-md-height split-box-image no-padding bg-image" style="background-image: url('/assets/img/team/team-6.jpg'); background-position: 50% 50%;">
 
 										<!-- Split box image height
 										============================
@@ -111,13 +111,13 @@
 												<h2 >-Moss<span style="color: ##516d51;"> <strong >/Musgo</strong></span></h2>
 												<p>Los musgos son una especie muy importante para el ecosistema,
 													ya que son los primeros organismos en aparecer en la
-													superficies del suelo y rocas, y esto ayuda a generar una 
+													superficies del suelo y rocas, y esto ayuda a generar una
 													capa húmeda y acolchada sobre la que se desarrollan el resto
 													de especies vegetales.
 												</p>
 												<p>
-													Es por eso que nace MOSS como “elemento creativo” un estudio donde 
-													convergen diferentes conocimientos claves para darle vida a todo 
+													Es por eso que nace MOSS como “elemento creativo” un estudio donde
+													convergen diferentes conocimientos claves para darle vida a todo
 													tipo de proyectos.
 												</p>
 												<nuxt-link to="contact" class="btn btn-dark-bordered margin-top-20">Want Me To Work For You?</nuxt-link>
@@ -130,7 +130,7 @@
 							</div> <!-- /.row -->
 						</div> <!-- /.container -->
 					</section>
-					
+
 					<!-- End split box section -->
 
 				</div>

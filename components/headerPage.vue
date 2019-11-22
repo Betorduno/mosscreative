@@ -4,6 +4,7 @@
 
 			<!-- Begin logo
 			================ -->
+
 			<div id="logo">
 				<router-link to="/" ><img :src="logoType" v-if="logoType" title="Home" alt="logo"></router-link>
 			</div>
@@ -26,4 +27,4 @@ export default {
 		headerPage
 	}
 }
-</script> 
+</script>

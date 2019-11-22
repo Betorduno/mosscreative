@@ -25,54 +25,42 @@
       </form>
       <!-- End global search form -->
     </div>
-    <!-- End global search -->
+	<div id="header">
+			<!-- Begin logo
+			================-->
+			<div id="logo">
+				<nuxt-link to="/">
+					<img src="../../static/assets/img/logo-white.png" title="Home" alt="logo" />
+				</nuxt-link>
+			</div>
+			<!-- End logo -->
 
-    <!-- ===================
-		///// Begin header /////
-    ====================-->
-    <headerPage/>
-    <!-- End header -->
+			<!-- =================
+			///// Begin menu /////
+			======================
+			* Use class "slide-left", "slide-left-half", "slide-right", "slide-right-half", "slide-top", "slide-bottom" or "zoom-in" to change menu effect.
+			-->
 
-    <!-- *************************************
-		*********** Begin body content ***********
-    **************************************-->
+  			  <headerPage/>
+		</div>
+
+
     <div id="body-content">
       <!-- Begin content container -->
       <div id="content-container">
-        <!-- ========================
-				///// Begin page header /////
-        =========================-->
-        <pageOneHeader v-if="projects.length>0" :projects="projects"/>
-        <!-- End page header -->
-        <!-- ======================================================
-				///// Begin split box section (portfolio single info) /////
-				based on: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
-        =======================================================-->
-        <pageOneInfo v-if="projects.length>0" :projects="projects"/>
-        <!-- End split box section -->
-        <!-- ================================================
-				///// Begin portfolio single gallery (carousel) /////
-        =================================================-->
-        <pageOneGallery v-if="projects.length>0" :projects="projects"/>
-        <!-- End portfolio single gallery -->
-        <!-- ===================================
-				///// Begin call to action section /////
-        ====================================-->
-        <pageOneAction v-if="projects.length>0" :projects="projects" />
-        <!-- End call to action section -->
-        <!-- =====================================================
-				///// Begin portfolio single nav (Next/Prev project) /////
-        ======================================================-->
-        <pageOneNext v-if="projects.length>0" :projects="projects"/>
 
-        <!-- End portfolio single nav -->
+        <pageOneHeader v-if="projects.length>0" :projects="projects"/>
+
+        <pageOneInfo v-if="projects.length>0" :projects="projects"/>
+
+        <pageOneGallery v-if="projects.length>0" :projects="projects"/>
+
+        <pageOneAction v-if="projects.length>0" :projects="projects" />
+
+        <pageOneNext v-if="projects.length>0 && datos.length>0" :projects="projects" :datos ="datos" />
+
       </div>
       <!-- End content container -->
-      <!-- ===================
-			///// Begin footer /////
-			========================
-			* Use class "fixed-footer" to enable fixed footer (no effect on small devices).
-      -->
 
       <footerPage />
       <!-- End footer -->
@@ -91,9 +79,15 @@ import footerPage from "../../components/footer";
 import contentful from "../../plugins/contentful";
 import _ from "lodash";
 export default {
+	 asyncData () {
+    return {
+      name: process.static ? 'static' : (process.server ? 'server' : 'client')
+    }
+  },
   data() {
     return {
-      projects: []
+	  projects: [],
+	  datos: []
     }
   },
   components: {
@@ -108,16 +102,27 @@ export default {
   methods: {
 
 	  async getData() {
-
-		  let id = this.$route.params.id;
+		let id = this.$route.params.id;
       let response = await contentful.getEntry(id)
       this.projects = Object.values(response)
 
-	  }
+	  },
+	  getNext() {
+      contentful
+        .getEntries({ content_type: "projects" })
+        .then(v => {
+            this.datos= v.items;
+        })
+        .catch(error => {
+          alert(error);
+        });
+
+    }
   },
   mounted() {
 	  this.getData();
-    window.dispatchEvent(new Event("resize"));
+	  this.getNext();
+    	window.dispatchEvent(new Event("resize"));
   }
 };
 </script>

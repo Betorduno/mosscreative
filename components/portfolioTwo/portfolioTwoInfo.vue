@@ -33,15 +33,15 @@
 										<span class="hide-from-lg">....</span>
 										{{projects[1].laucheProjectUrlDescription}}
 									</li>
+									<li>
+										<br>
+										<a
+											target="_blank"
+											:href="projects[1].urlProjects"
+											class="btn btn-primary btn-lg btn-block"
+										>Launch Project</a>
+									</li>
 								</ul>
-
-								<li>
-									<a
-										target="_blank"
-										href="http://www.backbonebranding.com/"
-										class="btn btn-primary btn-lg btn-block"
-									>Launch Project</a>
-								</li>
 							</div>
 							<!-- /.col -->
 						</div>

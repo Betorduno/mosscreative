@@ -5,9 +5,7 @@
 				<div class="row">
 					<div class="row-md-height">
 						<!-- Column -->
-						<div
-							class="col-md-6 col-md-height col-md-middle no-padding"
-						>
+						<div class="col-md-6 col-md-height col-md-middle no-padding">
 							<!-- Begin split box content -->
 							<div class="split-box-content">
 								<h3>

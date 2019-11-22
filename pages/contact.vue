@@ -9,7 +9,7 @@
       ================-->
       <div id="logo">
         <nuxt-link to="index">
-          <img src="assets/img/logo-white.png" title="Home" alt="logo" />
+          <img src="/assets/img/logo-white.png" title="Home" alt="logo" />
         </nuxt-link>
       </div>
       <menuPage />
@@ -17,7 +17,7 @@
     <!-- End header -->
 
     <!-- *************************************
-		*********** Begin body content *********** 
+		*********** Begin body content ***********
     **************************************-->
     <div id="body-content">
       <!-- Begin content container -->
@@ -25,15 +25,15 @@
         <!-- ========================
 				///// Begin page header /////
         =========================-->
-       
+
               <section id="page-header" data-percent-height="0.9">
 
 					<!-- Begin page header image -->
-					<div class="page-header-image parallax fade-out-scroll-6 bg-image" style="background-image: url('assets/img/page-header/page-header-bg-12.jpg'); background-position: 50% 50%;">
+					<div class="page-header-image parallax fade-out-scroll-6 bg-image" style="background-image: url('/assets/img/page-header/page-header-bg-12.jpg'); background-position: 50% 50%;">
 
 						<!-- Begin page header caption -->
 						<div class="page-header-caption">
-							<h1 class="page-header-title">Contact</h1>
+							<h1 class="page-header-title">Contacto</h1>
 						</div>
 						<!-- End page header caption -->
 
@@ -44,7 +44,7 @@
 					</div>
 					<!-- End page header image -->
 
-				</section>  	
+				</section>
         <!-- End page header -->
 
         <!-- ========================================
@@ -58,20 +58,20 @@
                 <!-- Column -->
                 <div
                   class="col-md-6 col-md-height col-md-middle bg-dark bg-image"
-                  style="background-image: url('assets/img/world-map.png'); background-position: 50% 50%;"
+                  style="background-image: url('/assets/img/world-map.png'); background-position: 50% 50%;"
                 >
                   <!-- Begin contact info -->
                   <div class="contact-info-wrap">
                     <div class="contact-info">
                       <p>
-                        <i class="fas fa-home"></i> address: 121 King Street, Melbourne, Australia
+                        <i class="fas fa-home"></i> Direcciòn: Cra 32D #9-17
                       </p>
                       <p>
-                        <i class="fas fa-phone"></i> phone: +123 456 789 000
+                        <i class="fas fa-phone"></i> Celular: +57 3004884331
                       </p>
                       <p>
-                        <i class="fas fa-envelope"></i> email:
-                        <nuxt-link to="mailto:company@email.com" target="_blank">company@email.com</nuxt-link>
+                        <i class="fas fa-envelope"></i> Email:
+                        <a to="mailto:info@mosscreativo.com" target="_blank">info@mosscreativo.com</a>
                       </p>
                     </div>
 
@@ -79,64 +79,13 @@
                     <div class="social-buttons margin-top-20">
                       <ul>
                         <li>
-                          <nuxt-link
-                            to="contact#"
-                            class="btn btn-social-min btn-primary-bordered btn-rounded-full"
-                            target="_blank"
-                            title="Follow us on facebook"
-                          >
-                            <i class="fab fa-facebook-f"></i>
-                          </nuxt-link>
-                        </li>
-                        <li>
-                          <nuxt-link
-                            to="contact#"
-                            class="btn btn-social-min btn-primary-bordered btn-rounded-full"
-                            target="_blank"
-                            title="Follow us on twitter"
-                          >
-                            <i class="fab fa-twitter"></i>
-                          </nuxt-link>
-                        </li>
-                        <li>
-                          <nuxt-link
-                            to="contact#"
-                            class="btn btn-social-min btn-primary-bordered btn-rounded-full"
-                            target="_blank"
-                            title="Follow us on dribbble"
-                          >
-                            <i class="fab fa-dribbble"></i>
-                          </nuxt-link>
-                        </li>
-                        <li>
-                          <nuxt-link
-                            to="contact#"
-                            class="btn btn-social-min btn-primary-bordered btn-rounded-full"
-                            target="_blank"
-                            title="Follow us on behance"
-                          >
+                          <a href="https://www.instagram.com/moss.creativo/" class="btn btn-social-min btn-primary-bordered btn-rounded-full" target="_blank" title="Follow us on facebook">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+						  <a href="https://www.behance.net/pipe-toro" class="btn btn-social-min btn-primary-bordered btn-rounded-full" target="_blank" title="Follow us on facebook">
                             <i class="fab fa-behance"></i>
-                          </nuxt-link>
-                        </li>
-                        <li>
-                          <nuxt-link
-                            to="contact#"
-                            class="btn btn-social-min btn-primary-bordered btn-rounded-full"
-                            target="_blank"
-                            title="Follow us on linkedin"
-                          >
-                            <i class="fab fa-linkedin-in"></i>
-                          </nuxt-link>
-                        </li>
-                        <li>
-                          <nuxt-link
-                            to="contact#"
-                            class="btn btn-social-min btn-primary-bordered btn-rounded-full"
-                            target="_blank"
-                            title="Follow us on youtube"
-                          >
-                            <i class="fab fa-youtube"></i>
-                          </nuxt-link>
+                          </a>
+
                         </li>
                       </ul>
                     </div>
@@ -148,7 +97,7 @@
 
                 <!-- Column -->
                 <div class="col-md-6 col-md-height">
-                  <!-- Begin contact form 
+                  <!-- Begin contact form
                   =========================-->
                   <form id="contact-form">
                     <div class="contact-form-inner">
@@ -214,7 +163,7 @@
                               class="form-control"
                               name="message"
                               rows="4"
-                              placeholder="Your Message"
+                              placeholder="Tu mensaje"
                               required
                             ></textarea>
                           </div>
@@ -222,7 +171,7 @@
                       </div>
 
                       <div class="small text-gray margin-top-40">
-                        <em>* All fields are required!</em>
+                        <em>* campos Requerido!</em>
                       </div>
                     </div>
                     <!-- /.contact-form-inner -->
@@ -248,7 +197,7 @@
         </section>
         <!-- End split box section -->
 
-     
+
       </div>
       <!-- End content container -->
 

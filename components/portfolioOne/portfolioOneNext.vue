@@ -1,29 +1,29 @@
 <template>
 <!-- <div> -->
         <section id="portfolio-single-nav">
-					
-					<div class="container-fluid">
+
+					<div class="container-fluid"  v-if="idS!=''" >
 						<div class="row no-padding">
 
 							<div class="col col-md-12">
-								<nuxt-link to="/" class="ps-nav-next">
-									<div class="ps-nav ps-nav-single bg-image" style="background-image: url('assets/img/porfolio/portfolio-1.jpg'); background-position: 50% 54%">
+								<a :href="'/portfolio'+portfolioModel+'/'+idS" class="ps-nav-next">
+									<div class="ps-nav ps-nav-single bg-image" :style="'background-image: url('+image+'); background-position: 50% 54%'">
 										<div class="ps-nav-meta">
-											<div><h4 class="ps-nav-text">Next Project</h4></div>
-											<div><h2 class="ps-nav-title">Sushi Bar</h2></div>
+											<div><h4 class="ps-nav-text">{{title}}</h4></div>
+											<div><h2 class="ps-nav-title">{{description}}</h2></div>
 										</div>
 									</div>
 									<div class="ps-nav-arrow"></div>
-								</nuxt-link>
+								</a>
 							</div> <!-- /.col -->
 
 						</div> <!-- /.row -->
 					</div> <!-- /.container -->
 
 					<!--Begin back to list -->
-					<router-link to="/" class="ps-back-to-list">Back To List</router-link> 
-						
-					
+					<router-link to="/" class="ps-back-to-list">Back To List</router-link>
+
+
 					<!--End back to list -->
 
 				</section>
@@ -33,24 +33,36 @@
 import contentful from "@/plugins/contentful.js";
 
 export default {
-	 data() {
-    return {
-      projects: []
-    }
-  },
+	props:['datos','projects'],
+	data(){
+		return {
+			idS:'',
+			image:'',
+			title:'',
+			description:'',
+			portfolioModel:''
+		}
+	},
 	methods: {
+		filterID(){
+			 let IdSig=(this.projects[1].id)+1;
+			this.datos.forEach(element => {
 
-	  async getData() {
-     
-	  
-      let response = await contentful.getEntries({'content-type':'projects'})
-      this.projects = Object.values(response)
-      console.log("este es ",this.projects);
-	  }
-  },
-  mounted() {
-	  this.getData();
-  }
+				if(element.fields.id ==IdSig){
+					this.idS=element.sys.id;
+					this.image =element.fields.mainImage[0].fields.file.url;
+					this.title=element.fields.title;
+					this.description =element.fields.subtitle;
+					this.portfolioModel = element.fields.portfolioModel;
 
+				}
+
+			});
+		}
+	},
+	mounted(){
+		this.filterID();
+		// console.log('este es: ',this.projects[1].id)
+	}
 }
 </script>

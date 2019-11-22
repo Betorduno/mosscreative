@@ -18,10 +18,10 @@
 									<nuxt-link  to="/" class="sub-menu-trigger">Home</nuxt-link>
 								</li>
 								<li class="has-children">
-									<nuxt-link to="somoos" class="sub-menu-trigger">SoMoos</nuxt-link>
+									<nuxt-link to="/somoos" class="sub-menu-trigger">SoMoos</nuxt-link>
 								</li>
 								<li class="has-children">
-									<nuxt-link to="contact" class="sub-menu-trigger">Contacto</nuxt-link>
+									<nuxt-link to="/contact" class="sub-menu-trigger">Contacto</nuxt-link>
 								</li>
 
 							</ul>
@@ -39,12 +39,9 @@
 								<!-- Begin social buttons -->
 								<div class="social-buttons">
 									<ul>
-										<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on twitter"><i class="fab fa-twitter"></i></nuxt-link></li>
-										<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on dribbble"><i class="fab fa-dribbble"></i></nuxt-link></li>
-										<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on facebook"><i class="fab fa-facebook-f"></i></nuxt-link></li>
-										<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on behance"><i class="fab fa-behance"></i></nuxt-link></li>
-										<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on linkedin"><i class="fab fa-linkedin-in"></i></nuxt-link></li>
-										<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on youtube"><i class="fab fa-youtube"></i></nuxt-link></li>
+										<li><a href="https://www.instagram.com/moss.creativo/" class="btn btn-primary btn-link" target="_blank" title="Follow us on instagram"><i class="fab fa-instagram"></i></a></li>
+										<li><a href="https://www.behance.net/pipe-toro" class="btn btn-primary btn-link" target="_blank" title="Follow us on instagram"><i class="fab fa-behance"></i></a></li>
+
 									</ul>
 								</div>
 								<!-- End social buttons -->

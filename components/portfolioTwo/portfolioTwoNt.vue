@@ -4,17 +4,17 @@
 					<div class="container-fluid">
 						<div class="row no-padding">
 							<div class="col col-md-6">
-								<a href="portfolio-single-2.html" class="ps-nav-prev">
+								<a :href="'/portfolio'+pModelAnt+'/'+idAnt" class="ps-nav-prev"  v-if="idAnt!= null">
 									<div
 										class="ps-nav bg-image"
-										style="background-image: url('../assets/img/porfolio/portfolio-1.jpg'); background-position: 50% 40%"
+										:style="'background-image: url('+imgAnt+'); background-position: 50% 40%'"
 									>
 										<div class="ps-nav-meta">
 											<div>
 												<h4 class="ps-nav-text">Previous Project</h4>
 											</div>
 											<div>
-												<h2 class="ps-nav-title">Sushi Bar</h2>
+												<h2 class="ps-nav-title">{{tituloAnt}}</h2>
 											</div>
 										</div>
 									</div>
@@ -24,17 +24,17 @@
 							<!-- /.col -->
 
 							<div class="col col-md-6">
-								<a href="portfolio-single-4.html" class="ps-nav-next">
+								<a :href="'/portfolio'+pModel+'/'+id" class="ps-nav-next" v-if="id!= null">
 									<div
 										class="ps-nav bg-image"
-										style="background-image: url('../assets/img/porfolio/portfolio-5.jpg'); background-position: 50% 50%"
-									>
+										:style="'background-image: url('+img+'); background-position: 50% 50%'"
+										>
 										<div class="ps-nav-meta">
 											<div>
 												<h4 class="ps-nav-text">Next Project</h4>
 											</div>
 											<div>
-												<h2 class="ps-nav-title">The 13th High Fest</h2>
+												<h2 class="ps-nav-title">{{titulo}}</h2>
 											</div>
 										</div>
 									</div>
@@ -53,3 +53,49 @@
 				</section>
 	</div>
 </template>
+<script>
+export default {
+
+	props:['projects', 'datos'],
+	data(){
+		return {
+			id:null,
+			img:null,
+			titulo:null,
+			pModel:null,
+			idAnt:null,
+			imgAnt:null,
+			tituloAnt:null,
+			pModelAnt:null
+		}
+	},
+	methods: {
+		filterID(){
+			 const IdSig=(this.projects[1].id)+1;
+			 const IdAnt =(this.projects[1].id)-1;
+			this.datos.forEach(element => {
+
+				if( element.fields.id==IdSig){
+
+					this.id=element.sys.id;
+					this.img =element.fields.mainImage[0].fields.file.url;
+					this.titulo=element.fields.title;
+					this.pModel = element.fields.portfolioModel;
+				}
+				if(element.fields.id ==IdAnt){
+
+					this.idAnt=element.sys.id;
+					this.imgAnt =element.fields.mainImage[0].fields.file.url;
+					this.tituloAnt=element.fields.title;
+					this.pModelAnt = element.fields.portfolioModel;
+				}
+
+			});
+		}
+	},
+	mounted(){
+		this.filterID();
+		// console.log('este es: ',this.projects[1].id)
+	}
+}
+</script>

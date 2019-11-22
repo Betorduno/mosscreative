@@ -31,11 +31,8 @@
 							<!-- Begin social buttons -->
 							<div class="social-buttons margin-bottom-15">
 								<ul>
-									<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on facebook"><i class="fab fa-facebook-f"></i></nuxt-link></li>
-									<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on twitter"><i class="fab fa-twitter"></i></nuxt-link></li>
-									<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on dribbble"><i class="fab fa-dribbble"></i></nuxt-link></li>
-									<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on behance"><i class="fab fa-behance"></i></nuxt-link></li>
-									<li><nuxt-link to="/" class="btn btn-primary btn-link" target="_blank" title="Follow us on youtube"><i class="fab fa-youtube"></i></nuxt-link></li>
+									<li><a href="https://www.instagram.com/moss.creativo/" class="btn btn-primary btn-link" target="_blank" title="Follow us on facebook"><i class="fab fa-instagram"></i></a></li>
+									<li><a href="https://www.behance.net/pipe-toro" class="btn btn-primary btn-link" target="_blank" title="Follow us on behance"><i class="fab fa-behance"></i></a></li>
 								</ul>
 							</div>
 							<!-- End social buttons -->
@@ -51,7 +48,7 @@
 
 							<!-- Begin copyright -->
 							<div class="copyright">
-								Copyright 2016 / All rights reserved <br>
+								Copyright 2020 / All rights reserved <br>
 							</div>
 							<!-- End copyright -->
 
@@ -61,8 +58,8 @@
 				</div> <!-- /.container -->
 
 				<!-- Scroll to top button -->
-			
-				
+
+
 
 			</footer>
     </div>

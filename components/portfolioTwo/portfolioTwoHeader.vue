@@ -15,11 +15,7 @@
 						<!-- End page header caption -->
 
 						<!-- Begin scroll down button -->
-						<nuxt-link
-							to="portfolioTwoInfo#portfolio-single-info"
-							class="scroll-down sm-scroll hide-from-sm"
-							title="Scroll down"
-						></nuxt-link>
+
 						<!-- End scroll down button -->
 					</div>
 					<!-- End page header image -->

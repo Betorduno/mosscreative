@@ -79,7 +79,7 @@
 				<!-- =====================================================
 				///// Begin portfolio single nav (Next/Prev project) /////
 				======================================================-->
-				<pageNt v-if="projects.length>0" :projects="projects"/>
+				<pageNt v-if="projects.length>0 && datos.length>0" :projects="projects" :datos ="datos"/>
 				<!-- End portfolio single nav -->
 			</div>
 			<!-- End content container -->
@@ -108,7 +108,8 @@ import pageNext from '../../components/portfolioTwo/portfolioTwoNext';
 export default {
 	data() {
 		return {
-			projects: []
+			projects: [],
+			datos:[]
 		};
 	},
 	components: {
@@ -122,14 +123,18 @@ export default {
 	},
 	methods: {
 		async getData() {
-			let id = this.$route.params.id;
+			let id = this.$route.params.id2;
 			let response = await contentful.getEntry(id);
 			this.projects = Object.values(response);
-
-		}
+		},
+		async getNext() {
+			let response= await contentful.getEntries({ content_type: "projects" })
+			this.datos= response.items;
+    }
 	},
 	mounted() {
 		this.getData();
+		this.getNext();
 		window.dispatchEvent(new Event('resize'));
 	}
 };
