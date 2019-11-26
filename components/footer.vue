@@ -74,8 +74,9 @@
 									<i class="fas fa-envelope"></i>
 								</button>
 							</div>
-							<p id="resp"></p>
+
 						</form>
+						<p v-if="msj">{{resp}}</p>
 						<!-- End subscribe form -->
 
 						<!-- Begin copyright -->
@@ -99,16 +100,39 @@
 export default {
 	data() {
 		return {
-			email: ''
+			email: '',
+			resp: null,
+			msj:false
 		};
 	},
 	methods: {
+		respuesta(){
+
+			this.resp='Muy bien, te has suscrito!'
+			this.msj =true;
+			setTimeout(
+			() => {
+				this.msj=false;
+			},5000)
+		},
 		sendEmail() {
 			const url='https://script.google.com/macros/s/AKfycbxQAmyCuhG8eM4AY015gz-bclYNgXUGZIRVMVwpG4SD8NIdyBU/exec?email='+ this.email;
-			const ventana =window.open(url,'','width=200,height=100');
+			// const ventana =window.open(url,'','width=200,height=100');
 
-			 setTimeout(function closeWin() { ventana.close()}, 5000);
+			//  setTimeout(function closeWin() { ventana.close()}, 5000);
+			 fetch('https://cors-anywhere.herokuapp.com/'+url)
+				.then((response)=> {
+
+					this.respuesta();
+					return response.json();
+
+
+				})
+				.then(function(myJson) {
+					console.log(myJson);
+				});
 		}
+
 	}
 };
 </script>

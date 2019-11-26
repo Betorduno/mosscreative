@@ -3,7 +3,7 @@
 	<body class="pace-done">
 		<div id="header">
 			<div id="logo">
-				<nuxt-link to="index">
+				<nuxt-link to="/">
 					<img src="/assets/img/logo-white.png" title="Home" alt="logo" />
 				</nuxt-link>
 			</div>
@@ -72,7 +72,9 @@
 									</div>
 								</div>
 								<div class="col-md-6 col-md-height">
-									<form id="contact-form">
+									<form id="contact-form"
+									v-on:submit.prevent="sendEmail()"
+									>
 										<div class="contact-form-inner">
 											<div class="contact-form-info">
 												<h2>- Get In Touch -</h2>
@@ -84,19 +86,19 @@
 											<div class="row">
 												<div class="col-lg-6">
 													<div class="form-group">
-														<input type="text" class="form-control" name="name" placeholder="Nombre" required />
+														<input type="text" class="form-control" name="name" placeholder="Nombre" v-model="nombre" required />
 													</div>
 												</div>
 												<div class="col-lg-6">
 													<div class="form-group">
-														<input type="email" class="form-control" name="email" placeholder="Email" required />
+														<input type="email" class="form-control" name="email" placeholder="Email" v-model="email" required />
 													</div>
 												</div>
 											</div>
 											<div class="row">
 												<div class="col-lg-12">
 													<div class="form-group">
-														<input type="text" class="form-control" name="subject" placeholder="Tema" required />
+														<input type="text" class="form-control" name="subject" placeholder="Tema" v-model="subject" required />
 													</div>
 												</div>
 											</div>
@@ -104,6 +106,7 @@
 												<div class="col-lg-12">
 													<div class="form-group">
 														<textarea
+															v-model="message"
 															class="form-control"
 															name="message"
 															rows="4"
@@ -112,8 +115,11 @@
 														></textarea>
 													</div>
 												</div>
+
 											</div>
-											<div class="small text-gray margin-top-40"></div>
+											<div class="small text-gray margin-top-40">
+												<p v-if="msj">{{resp}}</p>
+											</div>
 										</div>
 										<div class="row">
 											<div class="col-lg-12 no-padding">
@@ -139,6 +145,43 @@
 import footerPage from '../components/footer';
 import menuPage from '../components/headerMenu';
 export default {
+	data() {
+		return {
+			nombre:null,
+			email: null,
+			subject: null,
+			message:null,
+			resp: null,
+			msj:false
+		}
+	},
+	methods:{
+		respuesta(){
+
+			this.resp='Datos Enviados!'
+			this.msj =true;
+			setTimeout(
+			() => {
+				this.msj=false;
+			},5000)
+		},
+		sendEmail() {
+			const url='https://script.google.com/macros/s/AKfycbyF-nDiuu5AB11FWXn38_lPIg6_dVvokSkzHBIa3MaLoK-ypIE/exec?nombre='+this.nombre+'&&email='+this.email+'&&tema='+this.subject+'&&mensaje='+this.message
+			// const ventana =window.open(url,'','width=200,height=100');
+
+			//  setTimeout(function closeWin() { ventana.close()}, 5000);
+			 fetch('https://cors-anywhere.herokuapp.com/'+url)
+				.then((response)=> {
+					this.respuesta();
+					return response.json();
+
+				})
+				.then(function(myJson) {
+					console.log(myJson);
+				});
+		}
+
+	},
 	mounted() {
 		window.dispatchEvent(new Event('resize'));
 	},
