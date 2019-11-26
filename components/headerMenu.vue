@@ -88,26 +88,46 @@
 </template>
 <script>
 export default {
-	methods: {
-		triggerMenu () {
-			let body = $('body')
-			if (body.hasClass('menu-open')) {
-				body.removeClass('menu-open')
-			} else {
-				body.addClass('menu-open')
-			}
-		},
-		checkMenu () {
-			let body = $('body')
-			if (body.hasClass('menu-open')) {
-				body.removeClass('menu-open')
-			}
-		}
-	},
+	// methods: {
+	// 	triggerMenu () {
+	// 		let body = $('body')
+	// 		if (body.hasClass('menu-open')) {
+	// 			body.removeClass('menu-open')
+	// 		} else {
+	// 			body.addClass('menu-open')
+	// 		}
+	// 	},
+	// 	checkMenu () {
+	// 		let body = $('body')
+	// 		if (body.hasClass('menu-open')) {
+	// 			body.removeClass('menu-open')
+	// 		}
+	// 	}
+	// },
+	// mounted(){
+	// 	$('.mt-inner').click(this.triggerMenu)
+	// 	this.checkMenu()
+	// }
 	mounted(){
-		$('.mt-inner').click(this.triggerMenu)
-		this.checkMenu()
+		$('#menu-trigger').on("click",function() {
+			$('body').toggleClass('menu-open');
+
+			// trigger animate
+			$("#menu-trigger .str-1").toggleClass("top-animate");
+			$("#menu-trigger .str-2").toggleClass("mid-animate");
+			$("#menu-trigger .str-3").toggleClass("bottom-animate");
+
+			return false;
+		});
+
+		let body = $('body')
+		if (body.hasClass('menu-open')) {
+			body.removeClass('menu-open')
+		}
+
 	}
+
+
 }
 </script>
 

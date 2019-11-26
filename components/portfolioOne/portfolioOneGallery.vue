@@ -14,7 +14,7 @@
                 :href="project.fields.file.url"
                 class="cc-item ps-gallery-item padding-height-75 popup-trigger bg-image"
                 :style="'background-image: url('+ project.fields.file.url +'); background-position: 50% 50%;'"
-                data-title="by: yogurt86"
+                data-title="Nos reservamos el derecho de publicación y utilización de estos archivos"
               >
                 <div class="ps-gallery-read-more">
                   <i class="fas fa-search"></i>
@@ -38,7 +38,9 @@ export default {
   },
   mounted() {
     $(".owl-carousel").owlCarousel({
-      nav: true,
+	  items:3,
+	  nav: true,
+	  navText: ['', ''],
       responsive: {
         0: {
           items: 1

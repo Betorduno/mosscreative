@@ -48,7 +48,7 @@
 					<!-- /.container -->
 
 					<!--Begin back to list -->
-					<nuxt-link to="/" class="ps-back-to-list">Back To List</nuxt-link>
+					<nuxt-link to="/" class="ps-back-to-list">Pagina Principal</nuxt-link>
 					<!--End back to list -->
 				</section>
 	</div>

@@ -33,20 +33,20 @@
 									<li>
 										<strong>Client:</strong>
 										<span class="hide-from-lg"
-											>.............</span
+											></span
 										>{{ projects[1].clienteDescription }}
 									</li>
 									<li>
 										<strong>Category:</strong>
 										<span class="hide-from-lg"
-											>............</span
+											></span
 										>
 										{{ projects[1].categoryDescription }}
 									</li>
 									<li>
 										<strong>Launch Project:</strong>
 										<span class="hide-from-lg"
-											>............</span
+											></span
 										>
 										<nuxt-link
 											target="_blank"

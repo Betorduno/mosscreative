@@ -29,7 +29,7 @@
 								<a
 									:href="project.fields.file.url"
 									class="ps-gallery-item popup-trigger"
-									data-title="by: Backbone Branding"
+									data-title="Nos reservamos el derecho de publicación y utilización de estos archivos"
 								>
 									<div
 										class="ps-gallery-item-image bg-image"

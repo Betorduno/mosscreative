@@ -3,38 +3,35 @@
         <!-- ===================================
     ///// Begin portfolio list section /////
     ==================================== -->
-    <section id="portfolio-list-section">
-        <div class="isotope-wrap">
-            <div class="isotope col-3">
-                <div class="isotope-items-wrap pli-caption-alter">
+	<section id="portfolio-list-section">
+					<div class="isotope-wrap">
+						<div class="isotope col-3">
+							<div class="isotope-items-wrap pli-caption-alter">
+								<div class="grid-sizer"></div>
 
-                    <div class="grid-sizer"></div>
-                    <!-- =====================
-                    /// Begin isotope item ///
-                    ========================== -->
-                    <div v-bind:class="getHeight(project)" v-for="project in projects" :key="project.fields.id" class="isotope-item">
-                    <!-- Begin portfolio list item -->
-                        <nuxt-link :to="'portfolio'+project.fields.portfolioModel+'/' + project.sys.id" class="portfolio-list-item bg-image" :style="getStyles(project)">
-                            <div class="pli-hover">
-                                <div class="pli-caption">
-                                    <div>
-                                        <h2 class="pli-title">{{project.fields.title}}</h2>
-                                    </div>
-                                    <div><span class="pli-category">{{project.fields.subtitle}}</span></div>
-                                </div>
-                                <div class="pli-arrow"></div>
-                            </div>
-                        </nuxt-link>
-                        <!-- End portfolio list item -->
-                    </div>
-                    <!-- End isotope item -->
-                </div>
-                <!-- End isotope items wrap -->
-            </div>
-            <!-- End isotope -->
+								<div  v-bind:class="'isotope-item '+getHeight(project)" v-for="project in projects" :key="project.fields.id" >
 
-        </div> <!-- /.isotope-wrap -->
-    </section>
+									<!-- Begin portfolio list item -->
+									<nuxt-link :to="'portfolio'+project.fields.portfolioModel+'/' + project.sys.id" class="portfolio-list-item bg-image" :style="getStyles(project)">
+										<div class="pli-hover">
+											<div class="pli-caption">
+												<div><h2 class="pli-title">{{project.fields.title}}</h2></div>
+												<div><span class="pli-category">{{project.fields.subtitle}}</span></div>
+											</div>
+											<div class="pli-arrow"></div>
+										</div>
+									</nuxt-link>
+									<!-- End portfolio list item -->
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+				</section>
+
     <!-- End section -->
     </div>
 </template>
@@ -106,20 +103,41 @@ export default {
 
             }
            }
-        },
+		},
+		orderID(projects){
+			// console.log('projects',projects.map(project => project.fields.id))
+			return projects.sort((prev, next) => {
+				let pos = 0
+				if (prev.fields.id < next.fields.id) {
+					pos = -1
+				}
+
+				if (prev.fields.id > next.fields.id) {
+					pos = 1
+				}
+
+				return pos
+			})
+		},
         getData () {
-           contentful.getEntries({ 'content_type': 'projects' })
-                    .then((v) => {
-                        this.projects = v.items
-                        this.initEffect()
-                        })
-                    .catch(error => {
-		                     alert(error)
-	                    })
-        }
+           	contentful.getEntries({ 'content_type': 'projects' })
+			.then((v) => {
+				let projects = v.items
+				this.initEffect()
+				// console.log('before: ', projects.map(project => project.fields.id))
+				let projectOrder = this.orderID(projects)
+
+				 console.log('after: ', projectOrder.map(project => project.fields.id))
+				this.projects = projectOrder
+			})
+			.catch(error => {
+				alert(error)
+			})
+		}
+
     },
     mounted () {
-	   this.getData()
+	   	this.getData()
     }
 }
 </script>

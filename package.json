@@ -13,6 +13,7 @@
   "dependencies": {
     "@nuxtjs/dotenv": "^1.4.1",
     "contentful": "^7.10.0",
+    "contentful-management": "^5.11.3",
     "nuxt": "^2.10.2"
   },
   "devDependencies": {}

@@ -20,17 +20,17 @@
 								<ul class="list-unstyled margin-bottom-30">
 									<li>
 										<strong>Client:</strong>
-										<span class="hide-from-lg">....</span>
+										<span class="hide-from-lg"></span>
 										{{projects[1].clienteDescription}}
 									</li>
 									<li>
 										<strong>Category:</strong>
-										<span class="hide-from-lg">....</span>
+										<span class="hide-from-lg"></span>
 										{{projects[1].categoryDescription}}
 									</li>
 									<li>
 										<strong>Launch Project:</strong>
-										<span class="hide-from-lg">....</span>
+										<span class="hide-from-lg"></span>
 										{{projects[1].laucheProjectUrlDescription}}
 									</li>
 									<li>
