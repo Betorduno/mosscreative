@@ -6,7 +6,7 @@
 							<div class="col-md-8">
 								<!-- Begin portfolio single info toggle -->
 								<div class="psi-toggle margin-right-20">
-									<h3>-{{projects[1].aboutProjectDescriptionTitle}}</h3>
+									<h1>-<strong>{{projects[1].aboutProjectDescriptionTitle}}</strong></h1>
 									<div class="psi-toggle-inner">
 										{{projects[1].aboutProjectDescription}}
 									</div>
@@ -19,17 +19,17 @@
 							<div class="col-md-4">
 								<ul class="list-unstyled margin-bottom-30">
 									<li>
-										<strong>Client:</strong>
+										<strong>Cliente:</strong>
 										<span class="hide-from-lg"></span>
 										{{projects[1].clienteDescription}}
 									</li>
 									<li>
-										<strong>Category:</strong>
+										<strong>Proyecto:</strong>
 										<span class="hide-from-lg"></span>
 										{{projects[1].categoryDescription}}
 									</li>
 									<li>
-										<strong>Launch Project:</strong>
+										<strong>Sitio:</strong>
 										<span class="hide-from-lg"></span>
 										{{projects[1].laucheProjectUrlDescription}}
 									</li>
@@ -39,7 +39,7 @@
 											target="_blank"
 											:href="projects[1].urlProjects"
 											class="btn btn-primary btn-lg btn-block"
-										>Launch Project</a>
+										>Conoce más</a>
 									</li>
 								</ul>
 							</div>

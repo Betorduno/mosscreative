@@ -31,20 +31,20 @@
 									style="color: #f3ebeb"
 								>
 									<li>
-										<strong>Client:</strong>
+										<strong>Cliente:</strong>
 										<span class="hide-from-lg"
 											></span
 										>{{ projects[1].clienteDescription }}
 									</li>
 									<li>
-										<strong>Category:</strong>
+										<strong>Proyecto:</strong>
 										<span class="hide-from-lg"
 											></span
 										>
 										{{ projects[1].categoryDescription }}
 									</li>
 									<li>
-										<strong>Launch Project:</strong>
+										<strong>Sitio:</strong>
 										<span class="hide-from-lg"
 											></span
 										>

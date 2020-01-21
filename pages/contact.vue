@@ -32,7 +32,7 @@
 							<div class="row-md-height">
 								<div
 									class="col-md-6 col-md-height col-md-middle bg-dark bg-image"
-									style="background-image: url('/assets/img/world-map.png'); background-position: 50% 50%;"
+									style="background-image: url('/assets/img/world-map.jpg'); background-position: 50% 50%;"
 								>
 									<div class="contact-info-wrap">
 										<div class="contact-info">
@@ -77,8 +77,8 @@
 									>
 										<div class="contact-form-inner">
 											<div class="contact-form-info">
-												<h2>- Get In Touch -</h2>
-												<p>Sollicitudin diam vitae, amet lacus donec eu, donec vulputate duis nullam nulla, suscipit nulla orci, ornare maecenas eget gravida. Curae sollicitudin lobortis.</p>
+												<h1><strong>TrabajeMOSS juntos</strong></h1>
+												<p>Para empezar a crear ideas y darle vida a esos proyectos que marcarán la diferencia, contáctanos.</p>
 											</div>
 											<input type="hidden" name="project_name" value="yourwebsiteaddress.com" />
 											<input type="hidden" name="admin_email" value="your@email.com" />
@@ -91,14 +91,14 @@
 												</div>
 												<div class="col-lg-6">
 													<div class="form-group">
-														<input type="email" class="form-control" name="email" placeholder="Email" v-model="email" required />
+														<input type="email" class="form-control" name="email" placeholder="Telefono" v-model="subject" required />
 													</div>
 												</div>
 											</div>
 											<div class="row">
 												<div class="col-lg-12">
 													<div class="form-group">
-														<input type="text" class="form-control" name="subject" placeholder="Tema" v-model="subject" required />
+														<input type="text" class="form-control" name="subject" placeholder="Email" v-model="email" required />
 													</div>
 												</div>
 											</div>
@@ -110,13 +110,20 @@
 															class="form-control"
 															name="message"
 															rows="4"
-															placeholder="Tu mensaje"
+															placeholder="Mensaje"
 															required
 														></textarea>
 													</div>
 												</div>
-
 											</div>
+											<div class="form-group">
+												<div class="form-check">
+													<input class="form-check-input" @click="validate()" type="checkbox" value="" id="invalidCheck" required>
+													<label class="form-check-label">
+														Acepto terminos y condiciones.<a href="#" @click="open"> click aqui</a>
+													</label>
+													</div>
+												</div>
 											<div class="small text-gray margin-top-40">
 												<p v-if="msj">{{resp}}</p>
 											</div>
@@ -135,6 +142,24 @@
 						</div>
 					</div>
 				</section>
+
+			</div>
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+				<div class="modal-header">
+					<h3 style="width: 400px">Tratamiento de mis datos personales</h3>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Ley Estatutaria 1581 de 2012 de Protección de Datos y normas, Moss Creativo S.A.S le informa al usuario que los datos obtenidos en este formulario serán incorporados en una base de datos tratados con finalidad netamente comercial.</p>
+				</div>
+
+				</div>
+			</div>
 			</div>
 			<footerPage />
 		</div>
@@ -147,15 +172,25 @@ import menuPage from '../components/headerMenu';
 export default {
 	data() {
 		return {
+			dialogVisible: false,
 			nombre:null,
 			email: null,
 			subject: null,
 			message:null,
 			resp: null,
-			msj:false
+			msj:false,
+			valid: false
 		}
 	},
 	methods:{
+
+		open() {
+        this.$alert('Ley Estatutaria 1581 de 2012 de Protección de Datos y normas, Moss Creativo S.A.S le informa al usuario que los datos obtenidos en este formulario serán incorporados en una base de datos tratados con finalidad netamente comercial.', 'Tratamiento de mis datos personales. ', {
+          confirmButtonText: 'Ok',
+          callback: action => {
+          }
+        });
+      },
 		respuesta(){
 
 			this.resp='Datos Enviados!'
@@ -179,6 +214,9 @@ export default {
 				.then(function(myJson) {
 					console.log(myJson);
 				});
+		},
+		validate(){
+			this.valid = true;
 		}
 
 	},

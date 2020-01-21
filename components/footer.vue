@@ -5,10 +5,10 @@
 				<div class="row">
 					<div class="col-md-4">
 						<!-- Begin footer text -->
+						<br>
 						<div class="footer-text">
-							<h4>- Bienvenidos</h4>Es para nosotros un placer presentar nuestro estudio
-							creativo MOSS, creemos en el poder de las ideas y
-							entendemos que se puede lograr con ellas.
+							<h2 style="color: #fff"><strong>TrabajaMOSS juntos</strong></h2>
+							<p>Es un placer presentar nuestro estudio creativo MOSS, creemos en el poder de las ideas y entendemos lo que se puede lograr con ellas.</p>
 						</div>
 						<!-- End footer text -->
 					</div>
@@ -67,7 +67,7 @@
 									class="form-control no-bg"
 									id="email"
 									name="email"
-									placeholder="Suscribete. Ingresa tu email..."
+									placeholder="Contáctanos. Ingresa tu email"
 									required
 								/>
 								<button class="bg-white" type="submit">
@@ -81,8 +81,8 @@
 
 						<!-- Begin copyright -->
 						<div class="copyright">
-							Copyright 2020 / All rights reserved
-							<br />
+							Todos los derechos reservados. Autorizo el tratamiento de mis datos personales. Ley Estatutaria 1581 de 2012 de Protección de Datos y normas
+							<br>
 						</div>
 						<!-- End copyright -->
 					</div>

@@ -12,9 +12,13 @@
   },
   "dependencies": {
     "@nuxtjs/dotenv": "^1.4.1",
+    "bootstrap": "^4.4.1",
     "contentful": "^7.10.0",
     "contentful-management": "^5.11.3",
-    "nuxt": "^2.10.2"
+    "element-ui": "^2.13.0",
+    "jquery": "^3.4.1",
+    "nuxt": "^2.10.2",
+    "popper.js": "^1.16.0"
   },
   "devDependencies": {}
 }

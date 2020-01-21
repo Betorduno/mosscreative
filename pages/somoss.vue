@@ -60,18 +60,18 @@
 						<div class="page-header-image parallax fade-out-scroll-6 bg-image" style="background-image: url('/assets/img/page-header/page-header-bg-25.jpg'); background-position: 50% 20%;">
 
 							<!-- Begin page header caption -->
-							<div class="page-header-caption">
+							<!-- <div class="page-header-caption">
 								<h1 class="page-header-title">MossCreativo</h1>
 								<div class="page-header-sub-title-wrap">
 									<h2 class="page-header-sub-title">
 										Who I Am.
 									</h2>
 								</div>
-							</div>
+							</div> -->
 							<!-- End page header caption -->
 
 							<!-- Begin scroll down button -->
-							<nuxt-link to="/somoos#who-i-am" class="scroll-down sm-scroll hide-from-sm" title="Scroll down"></nuxt-link>
+							<a href="/somoss#who-i-am" class="scroll-down sm-scroll hide-from-sm" title="Scroll down"></a>
 							<!-- End scroll down button -->
 
 						</div>
@@ -108,19 +108,13 @@
 										<!-- Begin split box content -->
 										<div class="split-box-content">
 											<div class="bg-transparent-6-white padding-30">
-												<h2 >-Moss<span style="color: ##516d51;"> <strong >/Musgo</strong></span></h2>
-												<p>Los musgos son una especie muy importante para el ecosistema,
-													ya que son los primeros organismos en aparecer en la
-													superficies del suelo y rocas, y esto ayuda a generar una
-													capa húmeda y acolchada sobre la que se desarrollan el resto
-													de especies vegetales.
+												<h1 >- <span style="color: ##516d51;"> <strong >SoMOSS</strong></span></h1>
+												<p>Un equipo que hace parte de un proceso creativo, plasmamos tus ideas y trabajamos juntos para que tus proyectos se hagan realidad. Esto es lo que nos apasiona, transformar lo que necesitas para tu empresa, con el mejor servicio y calidad. Lo hacemos a través de branding, packaging, piezas gráficas y soluciones web.
 												</p>
 												<p>
-													Es por eso que nace MOSS como “elemento creativo” un estudio donde
-													convergen diferentes conocimientos claves para darle vida a todo
-													tipo de proyectos.
+													<strong>¿Crecemos ideas juntos?</strong>
 												</p>
-												<nuxt-link to="contact" class="btn btn-dark-bordered margin-top-20">Want Me To Work For You?</nuxt-link>
+												<nuxt-link to="contact" class="btn btn-dark-bordered margin-top-20">Contáctanos</nuxt-link>
 											</div>
 										</div>
 										<!-- End split box content -->
@@ -148,7 +142,7 @@
 <script>
 import footerPage from '../components/footer'
 import menuPage from '../components/headerMenu'
-import logoBlack from "../static/assets/img/logo-black.png"
+import logoBlack from "../static/assets/img/logo-white.png"
 
 export default {
     components:{

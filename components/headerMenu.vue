@@ -18,7 +18,7 @@
 									<nuxt-link  to="/" class="sub-menu-trigger">Home</nuxt-link>
 								</li>
 								<li class="has-children">
-									<nuxt-link to="/somoos" class="sub-menu-trigger">SoMoos</nuxt-link>
+									<nuxt-link to="/somoss" class="sub-menu-trigger">SoMOSS</nuxt-link>
 								</li>
 								<li class="has-children">
 									<nuxt-link to="/contact" class="sub-menu-trigger">Contacto</nuxt-link>

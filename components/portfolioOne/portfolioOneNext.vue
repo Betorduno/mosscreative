@@ -11,8 +11,9 @@
 									>
 										<div class="ps-nav-meta">
 											<div>
-												<h4 class="ps-nav-text">Previous Project</h4>
+												<h1 style="background-color: #fff; color: #000"><strong>Proyecto</strong></h1>
 											</div>
+											<br>
 											<div>
 												<h2 class="ps-nav-title">{{tituloAnt}}</h2>
 											</div>
@@ -31,8 +32,9 @@
 										>
 										<div class="ps-nav-meta">
 											<div>
-												<h4 class="ps-nav-text">Next Project</h4>
+												<h1 style="background-color: #fff; color: #000"><strong>Proyecto</strong></h1>
 											</div>
+											<br>
 											<div>
 												<h2 class="ps-nav-title">{{titulo}}</h2>
 											</div>
@@ -48,7 +50,7 @@
 					<!-- /.container -->
 
 					<!--Begin back to list -->
-					<nuxt-link to="/" class="ps-back-to-list">Pagina Principal</nuxt-link>
+					<nuxt-link to="/" class="ps-back-to-list">Página Principal</nuxt-link>
 					<!--End back to list -->
 				</section>
 	</div>

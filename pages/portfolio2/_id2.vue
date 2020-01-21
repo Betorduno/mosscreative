@@ -32,7 +32,7 @@
 			================-->
 			<div id="logo">
 				<nuxt-link to="/">
-					<img src="../../static/assets/img/logo-black.png" title="Home" alt="logo" />
+					<img src="../../static/assets/img/logo-white.png" title="Home" alt="logo" />
 				</nuxt-link>
 			</div>
 			<!-- End logo -->
