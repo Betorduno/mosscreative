@@ -10,10 +10,10 @@
 							<div class="split-box-content">
 								<h3>
 									-{{
-										projects[1].aboutProjectDescriptionTitle
+										projects.aboutProjectDescriptionTitle
 									}}
 								</h3>
-								<p>{{ projects[1].aboutProjectDescription }}</p>
+								<p>{{ projects.aboutProjectDescription }}</p>
 							</div>
 							<!-- End split box content -->
 						</div>
@@ -34,14 +34,14 @@
 										<strong>Cliente:</strong>
 										<span class="hide-from-lg"
 											></span
-										>{{ projects[1].clienteDescription }}
+										>{{ projects.clienteDescription }}
 									</li>
 									<li>
 										<strong>Proyecto:</strong>
 										<span class="hide-from-lg"
 											></span
 										>
-										{{ projects[1].categoryDescription }}
+										{{ projects.categoryDescription }}
 									</li>
 									<li>
 										<strong>Sitio:</strong>
@@ -53,8 +53,7 @@
 											to=""
 										></nuxt-link
 										>{{
-											projects[1]
-												.laucheProjectUrlDescription
+											projects.laucheProjectUrlDescription
 										}}
 									</li>
 								</ul>
@@ -75,9 +74,6 @@
 export default {
 	props: {
 		projects: {}
-	},
-	mounted() {
-		console.log(this.projects[1].clienteDescription);
 	}
 };
 </script>

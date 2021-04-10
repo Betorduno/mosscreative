@@ -20,7 +20,7 @@
 							<div class="grid-sizer"></div>
 
 							<div
-								v-for="project in projects[1].mainImage"
+								v-for="project in projects.mainImage"
 								:key="project.fields.title"
 								:class="'isotope-item ' + getHeight()"
 							>

@@ -9,7 +9,7 @@
             class="owl-stage"
             style="transform: translate3d(0px, 0px, 0px); transition: all 0.25s ease 0s; width: 1822px;"
           >
-            <div  v-for="project in projects[1].mainImage"  :key="project.fields.title" class="owl-item active" style="width: 455.333px;">
+            <div  v-for="project in projects.mainImage"  :key="project.fields.title" class="owl-item active" style="width: 455.333px;">
               <a
                 :href="project.fields.file.url"
                 class="cc-item ps-gallery-item padding-height-75 popup-trigger bg-image"

@@ -1,24 +1,16 @@
 <template>
 	<div>
 		<section id="page-header" data-percent-height="0.9">
-					<!-- Begin page header image -->
 					<div
 						class="page-header-image parallax fade-out-scroll-5 bg-image"
-						:style="'background-image: url('+this.projects[1].mainImage[0].fields.file.url+'); background-position: 50% 30%;'"
+						:style="'background-image: url('+projects.mainImage[0].fields.file.url+'); background-position: 50% 30%;'"
 					>
-						<!-- Begin page header caption -->
 						<div class="page-header-caption">
 							<h1 class="page-header-title">
-								{{projects[1].title}}
+								{{projects.title}}
 							</h1>
 						</div>
-						<!-- End page header caption -->
-
-						<!-- Begin scroll down button -->
-
-						<!-- End scroll down button -->
 					</div>
-					<!-- End page header image -->
 				</section>
 	</div>
 </template>
@@ -28,6 +20,10 @@ export default {
 	data(){
 		return {
 		}
+	},
+	mounted() {
+		console.log('hola mundo');
+		console.log("******",this.headerData)
 	}
 }
 </script>

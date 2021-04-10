@@ -1,4 +1,5 @@
 <template>
+  <no-ssr>
   <div>
     <!-- Begin global search (simple)
 		==================================
@@ -49,15 +50,15 @@
       <!-- Begin content container -->
       <div id="content-container">
 
-        <pageOneHeader v-if="projects.length>0" :projects="projects"/>
+        <pageOneHeader v-if="Object.values(projects).length > 0" :projects="projects"/>
 
-        <pageOneInfo v-if="projects.length>0" :projects="projects"/>
+        <pageOneInfo  v-if="Object.values(projects).length > 0" :projects="projects"/>
 
-        <pageOneGallery v-if="projects.length>0" :projects="projects"/>
+        <pageOneGallery  v-if="Object.values(projects).length > 0" :projects="projects"/>
 
-        <pageOneAction v-if="projects.length>0" :projects="projects" />
+        <pageOneAction  v-if="Object.values(projects).length > 0" :projects="projects" />
 
-        <pageOneNext v-if="projects.length>0 && datos.length>0" :projects="projects" :datos ="datos" />
+        <pageOneNext v-if="Object.values(projects).length > 0 && Object.values(datos).length > 0" :projects="projects" :datos ="datos" />
 
       </div>
       <!-- End content container -->
@@ -67,6 +68,7 @@
     </div>
     <!-- End body content -->
   </div>
+  </no-ssr>
 </template>
 <script>
 import headerPage from "../../components/headerMenu";
@@ -104,7 +106,7 @@ export default {
 	  async getData() {
 		let id = this.$route.params.id;
       let response = await contentful.getEntry(id)
-      this.projects = Object.values(response)
+      this.projects = response.fields;
 
 	  },
 	  getNext() {

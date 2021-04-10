@@ -1,4 +1,5 @@
 <template>
+<no-ssr>
 <div>
 	<body>
 		<div id="global-search" class="gl-s gls-simple">
@@ -55,31 +56,30 @@
 				<!-- ========================
 				///// Begin page header /////
 				=========================-->
-				<pageHeader v-if="projects.length>0" :projects="projects"/>
+				<pageHeader v-if="Object.values(projects).length > 0"  :projects="projects"/>
 				<!-- End page header -->
-
 				<!-- ==================================
 				///// Begin portfolio single info /////
 				===================================-->
-				<pageInfo v-if="projects.length>0" :projects="projects"/>
+				<pageInfo  v-if="Object.values(projects).length > 0" :projects="projects"/>
 				<!-- End portfolio single info -->
 
 				<!-- =====================================
 				///// Begin portfolio single gallery /////
 				======================================-->
-				<pageGallery v-if="projects.length>0" :projects="projects"/>
+				<pageGallery  v-if="Object.values(projects).length > 0" :projects="projects"/>
 				<!-- End portfolio single gallery -->
 
 				<!-- ===================================
 				///// Begin call to action section /////
 				====================================-->
-				<pageNext v-if="projects.length>0" :projects="projects"/>
+				<pageNext  v-if="Object.values(projects).length > 0" :projects="projects"/>
 				<!-- End call to action section -->
 
 				<!-- =====================================================
 				///// Begin portfolio single nav (Next/Prev project) /////
 				======================================================-->
-				<pageNt v-if="projects.length>0 && datos.length>0" :projects="projects" :datos ="datos"/>
+				<pageNt v-if="Object.values(projects).length > 0 && Object.values(datos).length > 0" :projects="projects" :datos ="datos"/>
 				<!-- End portfolio single nav -->
 			</div>
 			<!-- End content container -->
@@ -95,6 +95,7 @@
 		<!-- End body content -->
 	</body>
 </div>
+</no-ssr>
 </template>
 <script>
 import contentful from '../../plugins/contentful';
@@ -125,7 +126,7 @@ export default {
 		async getData() {
 			let id = this.$route.params.id2;
 			let response = await contentful.getEntry(id);
-			this.projects = Object.values(response);
+			this.projects = response.fields;
 		},
 		async getNext() {
 			let response= await contentful.getEntries({ content_type: "projects" })

@@ -73,8 +73,8 @@ export default {
 	},
 	methods: {
 		filterID(){
-			 const IdSig=(this.projects[1].id)+1;
-			 const IdAnt =(this.projects[1].id)-1;
+			 const IdSig=(this.projects.id)+1;
+			 const IdAnt =(this.projects.id)-1;
 			this.datos.forEach(element => {
 
 				if( element.fields.id==IdSig){

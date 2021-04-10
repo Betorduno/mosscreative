@@ -4,9 +4,9 @@
 					<div class="container max-width-1000">
 						<div class="row">
 							<div class="col-md-12 text-center">
-								<h1><strong>{{projects[1].infoTitle}}</strong></h1>
+								<h1><strong>{{projects.infoTitle}}</strong></h1>
 								<p>
-									{{projects[1].infoDescription}}
+									{{projects.infoDescription}}
 								</p>
 								<a href="/contact" class="btn btn-primary btn-lg margin-top-30">Contáctanos!</a>
 							</div>
